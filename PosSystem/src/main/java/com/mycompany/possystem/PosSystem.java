@@ -6,8 +6,7 @@
 package com.mycompany.possystem;
 
 /**
- * 수정확인 줄
- * 하나더
+ *  4/11
  * @author jsh
  */
 
