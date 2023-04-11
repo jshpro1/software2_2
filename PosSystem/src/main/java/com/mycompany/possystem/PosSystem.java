@@ -6,7 +6,8 @@
 package com.mycompany.possystem;
 
 /**
- *
+ * 수정확인 줄
+ * 하나더
  * @author jsh
  */
 
@@ -25,7 +26,7 @@ public class PosSystem {
         double change = 0;
 
         while (true) {
-            System.out.println("판매할 메뉴의 가격을 입력하세요 (종료하려면 0 입력 하시오): ");
+            System.out.println("판매할 메뉴의 가격을 입력하세요 (종료하려면 0 입력): ");
             double price = scanner.nextDouble();
             if (price == 0) {
                 break;
