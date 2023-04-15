@@ -7,25 +7,18 @@ package com.mycompany.possystem;
 /**
  *
  * @author jsh
+ * 이미지 뺀 코드
  */
-import java.awt.Image;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Scanner;
-import javax.swing.ImageIcon;
+import java.io.*;
+import java.util.*;
 
 public class Product {
     private String name;
     private int price;
-    private Image image;
 
-    public Product(String name, int price, Image image) {
+    public Product(String name, int price) {
         this.name = name;
         this.price = price;
-        this.image = image;
     }
 
     public String getName() {
@@ -40,14 +33,6 @@ public class Product {
         this.price = price;
     }
 
-    public Image getImage() {
-        return image;
-    }
-
-    public void setImage(Image image) {
-        this.image = image;
-    }
-
     public static void main(String[] args) {
         ArrayList<Product> productList = new ArrayList<>();
 
@@ -60,15 +45,7 @@ public class Product {
                 String[] tokens = line.split(",");
                 String name = tokens[0];
                 int price = Integer.parseInt(tokens[1]);
-                String imagePath = tokens[2];
-                Image image = null;
-                // 이미지 파일 경로로부터 이미지 로드하기
-                // 예시로 ImageIcon을 사용한 코드
-                ImageIcon icon = new ImageIcon(imagePath);
-                if (icon != null) {
-                    image = icon.getImage();
-                }
-                Product product = new Product(name, price, image);
+                Product product = new Product(name, price);
                 productList.add(product);
             }
             scanner.close();
@@ -77,7 +54,8 @@ public class Product {
         }
 
         // 물품 추가
-        // 이미지는 따로 추가해야 함
+        Product newProduct = new Product("새로운 물품", 5000);
+        productList.add(newProduct);
 
         // 물품 삭제
         productList.removeIf(product -> product.getName().equals("삭제할 물품"));
@@ -94,11 +72,7 @@ public class Product {
             File file = new File("products.txt");
             FileWriter writer = new FileWriter(file);
             for (Product product : productList) {
-                String imagePath = ""; // 이미지 파일 경로
-                if (product.getImage() != null) {
-                    // 이미지 파일 경로 설정
-                }
-                String line = product.getName() + "," + product.getPrice() + "," + imagePath + "\n";
+                String line = product.getName() + "," + product.getPrice() + "\n";
                 writer.write(line);
             }
             writer.close();
