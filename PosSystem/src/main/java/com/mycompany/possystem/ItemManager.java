@@ -13,7 +13,7 @@ import java.io.*;
 import java.util.*;
 
 
-
+ㅈ
 public class ItemManager {
     private List<Item> itemList = new ArrayList<>();
     private File file = new File("itemList.txt");
