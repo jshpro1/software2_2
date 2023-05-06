@@ -2,7 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.possystem;
+package itemManager;
+
+import com.mycompany.possystem.*;
 
 /**
  *
@@ -12,10 +14,12 @@ package com.mycompany.possystem;
 public class Item {
     private String name;
     double price;
+    int inventory;
     
-    public Item(String name, double price) {
+    public Item(String name, double price,int inventory) {
         this.name = name;
         this.price = price;
+        this.inventory = inventory;
     }
     
     public String getName() {
@@ -24,5 +28,9 @@ public class Item {
     
     public double getPrice() {
         return price;
+    }
+    
+    public int getinventory(){
+        return inventory;
     }
 }
