@@ -13,24 +13,24 @@ import com.mycompany.possystem.*;
  */
 public class Item {
     private String name;
-    double price;
-    int inventory;
+    int price;
+    int stock;
     
-    public Item(String name, double price,int inventory) {
+    public Item(String name, int price,int stock) {
         this.name = name;
         this.price = price;
-        this.inventory = inventory;
+        this.stock = stock;
     }
     
     public String getName() {
         return name;
     }
     
-    public double getPrice() {
+    public int getPrice() {
         return price;
     }
     
-    public int getinventory(){
-        return inventory;
+    public int getstock(){
+        return stock;
     }
 }
