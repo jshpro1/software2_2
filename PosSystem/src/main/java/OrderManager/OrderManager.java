@@ -63,7 +63,7 @@ public class OrderManager {
             System.out.println();
         } 
         
-        if (writeItemsToFile(items, ITEM_FILE_PATH)) {
+        if (writeItemsToFile(items, "item.txt")) {
             System.out.println("물품 정보가 업데이트되었습니다.");
         } else {
             System.out.println("물품 정보 업데이트에 실패했습니다.");
@@ -140,10 +140,7 @@ public class OrderManager {
             return false;
         }
     }
-    private static void updateInventory(Map<String, Integer> inventory, String itemName, int quantity) {
-        int currentQuantity = inventory.get(itemName);
-        inventory.put(itemName, currentQuantity - quantity);
-    }
+
 
     private static boolean writeSalesToFile(Map<String, Integer[]> sales, String filePath) {
         try ( PrintWriter writer = new PrintWriter(new FileWriter(filePath, true))) {
