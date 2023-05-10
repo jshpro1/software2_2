@@ -14,7 +14,7 @@ public class OrderManager {
      private static final String ITEM_FILE_PATH = "item.txt";
      private static final String SALES_FILE_PATH = "sales.txt";
     public static void main(String[] args) {
-        Map<String, Integer[]> items = readItemsFromFile("item.txt");
+        Map<String, Integer[]> items = readItemsFromFile(ITEM_FILE_PATH);
         if (items == null) {
             System.out.println("물품 정보를 불러오는 중 오류가 발생했습니다.");
             return;
@@ -63,13 +63,13 @@ public class OrderManager {
             System.out.println();
         } 
         
-        if (writeItemsToFile(items, "item.txt")) {
+        if (writeItemsToFile(items, ITEM_FILE_PATH)) {
             System.out.println("물품 정보가 업데이트되었습니다.");
         } else {
             System.out.println("물품 정보 업데이트에 실패했습니다.");
         }
         
-        if (writeSalesToFile(sales, "sales.txt")) {
+        if (writeSalesToFile(sales, SALES_FILE_PATH)) {
             System.out.println("판매 정보가 저장되었습니다.");
         } else {
             System.out.println("판매 정보를 저장하는 중 오류가 발생했습니다.");
@@ -122,9 +122,8 @@ public class OrderManager {
     }
 
     private static void addSaleRecord(Map<String, Integer[]> sales, String itemName, int itemPrice, int quantity, int totalPrice) {
-        String date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
-        
-        sales.put(itemName+ " " + date , new Integer[]{itemPrice, quantity, totalPrice});
+        String date = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+        sales.put(itemName+ "," + date , new Integer[]{itemPrice, quantity, totalPrice});
     }
 
     private static boolean writeItemsToFile(Map<String, Integer[]> items, String filePath) {
