@@ -11,18 +11,34 @@ package DiscountManager;
 import java.util.Scanner;
 
 public class PointDiscountExample {
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Discount discount = new BaseDiscount(); // 기본 할인
+        double price = 50000;
 
-        System.out.print("상품 가격을 입력하세요: ");
-        double price = scanner.nextDouble();
+        // 포인트 할인
+        discount = new PointDiscount(discount, 10000);
+        double discountedPrice = discount.applyDiscount(price);
+        System.out.println("포인트 할인 후 가격: " + discountedPrice);
 
-        System.out.print("사용할 포인트를 입력하세요: ");
-        double point = scanner.nextDouble();
+        // 통신사 할인
+        discount = new TelecomDiscount(discount);
+        discountedPrice = discount.applyDiscount(price);
+        System.out.println("통신사 할인 후 가격: " + discountedPrice);
 
-        Discount discount = new PointDiscount(point);
-        double discountedPrice = discount.getDiscount(price);
+        // 제휴할인
+        discount = new AffiliateDiscount(discount);
+        discountedPrice = discount.applyDiscount(price);
+        System.out.println("제휴할인 후 가격: " + discountedPrice);
 
-        System.out.printf("할인 후 가격은 %.2f원 입니다.", discountedPrice);
+        // 포인트 할인과 통신사 할인 조합
+        discount = new PointDiscount(new TelecomDiscount(new BaseDiscount()), 10000);
+        discountedPrice = discount.applyDiscount(price);
+        System.out.println("포인트 할인과 통신사 할인 조합 후 가격: " + discountedPrice);
+
+        // 제휴할인과 포인트 할인 조합
+        discount = new AffiliateDiscount(new PointDiscount(new BaseDiscount(), 10000));
+        discountedPrice = discount.applyDiscount(price);
+        System.out.println("제휴할인과 포인트 할인 조합 후 가격: " + discountedPrice);
     }
 }
