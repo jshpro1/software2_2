@@ -8,15 +8,18 @@ package DiscountManager;
  *
  * @author jsh
  */
-public class PointDiscount implements Discount {
-    private double point;
 
-    public PointDiscount(double point) {
+//포인트 할인
+public class PointDiscount extends DiscountDecorator {
+    private final double point;
+
+    public PointDiscount(Discount discount, double point) {
+        super(discount);
         this.point = point;
     }
 
     @Override
-    public double getDiscount(double price) {
-        return price - point;
+    public double applyDiscount(double price) {
+        return super.applyDiscount(price - point);
     }
 }
