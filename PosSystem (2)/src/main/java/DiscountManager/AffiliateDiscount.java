@@ -8,9 +8,17 @@ package DiscountManager;
  *
  * @author jsh
  */
-public class AffiliationDiscount implements Discount {
+
+//제휴할인 3%
+public class AffiliateDiscount extends DiscountDecorator {
+    
+
+    public AffiliateDiscount(Discount discount) {
+        super(discount);
+    }
+
     @Override
-    public double getDiscount(double price) {
-        return price * 0.97;
+    public double applyDiscount(double price) {
+        return super.applyDiscount(price * 0.97);
     }
 }
