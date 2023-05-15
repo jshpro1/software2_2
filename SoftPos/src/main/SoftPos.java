@@ -4,6 +4,10 @@
  */
 package main;
 
+import Management.MenuManagement.Menu.PorkFriedRice;
+import Management.OrderManagement.Order.*;
+import Management.StockManagement.manager.*;
+
 /**
  *
  * @author ³²Áø¿ì
@@ -14,8 +18,15 @@ public class SoftPos {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        System.out.println("hello");
+        
+        OrderProcess op = new OrderProcess();
+        CerealsManager cm = new CerealsManager(op);
+        
+        op.getMenu(new PorkFriedRice());
+        op.notifyStockManager();
+        cm.count();
+        
+        
     }
     
 }

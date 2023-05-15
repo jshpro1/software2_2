@@ -3,9 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/main/SoftPos.java</file>
             <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/Test/Json/StockToJson.java</file>
-            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/OrderManagement/Order.java</file>
-            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/StockMagagement/Stock/Basic/BasicStock.java</file>
+            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/StockManagement/manager/VeggiesManager.java</file>
+            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/MenuManagement/Menu/Food.java</file>
+            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/StockManagement/manager/MeatsManager.java</file>
+            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/OrderManagement/Order/OrderProcess.java</file>
+            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/StockManagement/manager/CerealsManager.java</file>
+            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/MenuManagement/Menu/PorkFriedRice.java</file>
+            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/StockManagement/manager/StockManager.java</file>
+            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/MenuManagement/Menu/Noodle.java</file>
         </group>
     </open-files>
 </project-private>
