@@ -124,6 +124,7 @@ public class OrderManager {
     private static void addSaleRecord(Map<String, Integer[]> sales, String itemName, int itemPrice, int quantity, int totalPrice) {
         String date = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
         sales.put(itemName+ "," + date , new Integer[]{itemPrice, quantity, totalPrice});
+        
     }
 
     private static boolean writeItemsToFile(Map<String, Integer[]> items, String filePath) {
@@ -150,7 +151,8 @@ public class OrderManager {
                 int totalPrice = entry.getValue()[2];
 
                 writer.printf("%s,%d,%d,%d\n", date, itemPrice, quantity, totalPrice);
-            }
+                writer.close();
+  }
         } catch (IOException e) {
             return false;
         }
