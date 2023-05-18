@@ -4,19 +4,21 @@
  */
 package File;
 
+import Management.StockManagement.Stock.*;
 import Management.StockManagement.Stock.Stock;
 import Management.StockManagement.manager.StockManager;
 import com.google.gson.Gson;
 import java.io.File;
 import java.io.FileWriter;
+import java.util.ArrayList;
 
 /**
  *
  * @author ³²Áø¿ì
  */
-public class Save_StockData {
+public class Save_StockDataDefalt {
 
-    public Save_StockData(StockManager stockmanager) {
+    public Save_StockDataDefalt(ArrayList<Cereal> defalt) {
         try{
             Gson gs = new Gson();
             File file = new File("Stock_Pcs.json");
@@ -24,7 +26,8 @@ public class Save_StockData {
         
             
 //            String fileWriter = gs.toJson(stockmanager.getStockList());
-            String fileWriter = gs.toJson(stockmanager.getStockList());
+            String fileWriter = gs.toJson(defalt);
+            System.out.println(fileWriter);
 
             writer.write(fileWriter);
             writer.flush();

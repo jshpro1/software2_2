@@ -18,7 +18,7 @@ public class SoftPos {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+//        
 //        // model 0516
 //        OrderProcess op = new OrderProcess();
 //        CerealsManager cm = new CerealsManager(op);

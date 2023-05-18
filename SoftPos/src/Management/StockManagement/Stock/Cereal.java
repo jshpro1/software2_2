@@ -11,6 +11,17 @@ import Management.StockManagement.Stock.Stock;
  * @author ³²Áø¿ì
  */
 public class Cereal extends Stock{
+
+    public Cereal(String name, int kcal, int unit_price) {
+        this.name = name;
+        this.kcal = kcal;
+        this.unit_price = unit_price;
+    }
+    
+    public int getPrice(){
+        return unit_price;
+    }
+    
     public String kind(){
         return "Cereal";
     }

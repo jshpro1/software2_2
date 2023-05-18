@@ -23,8 +23,8 @@ public class OrderProcess implements Subject{ // 일단 재고 처리 관련 기능
         stockmanagers = new ArrayList<StockManager>();
     }
     
-
     public void addStockManager(StockManager o) { // 명단에 관리자 추가
+        
         stockmanagers.add(o);
     }
 

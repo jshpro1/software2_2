@@ -13,7 +13,10 @@ public abstract class Stock { //재고
     protected String name;
     protected int unit_price; //100그람 기준 가격
     protected int kcal; //칼로리
+    protected int pcs; // 재고 수 
     
-    
+    public int getPrice(){
+        return unit_price;
+    }
     public abstract String kind(); // 임시 재고 판별책
 }

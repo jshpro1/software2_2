@@ -17,16 +17,20 @@ import java.util.ArrayList;
  */
 public class PorkFriedRice extends Food{
 
+    
     public PorkFriedRice() {
         material = new ArrayList<Stock>();
         
-        material.add(new Cereal());
-        material.add(new Meat());
-        material.add(new Sauce());
-        material.add(new Veggie());
+        material.add(new Cereal("Rice",400,500));
+        material.add(new Meat("Pork",200,1000));
+        material.add(new Sauce("SoySauce",50,100));
+        material.add(new Veggie("Onion",50,800));
     }
     
     public void cook(){
+        for(Stock stock : this.material){
+            price += stock.getPrice();
+        }
     }
     
 }

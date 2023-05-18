@@ -11,6 +11,14 @@ import Management.StockManagement.Stock.Stock;
  * @author ³²Áø¿ì
  */
 public class Sauce extends Stock{
+    
+    public Sauce(String name, int kcal, int unit_price) {
+        this.name = name;
+        this.kcal = kcal;
+        this.unit_price = unit_price;
+    }
+    
+    
     public String kind(){
         return "Sauce";
     }

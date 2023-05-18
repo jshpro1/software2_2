@@ -24,8 +24,6 @@ public class PlaceAnOrder {
         meatsmanager = new MeatsManager(op);
         saucemanager = new SauceManager(op);
         veggieManager = new VeggiesManager(op);
-        
     }
-    
     
 }

@@ -11,15 +11,17 @@ import Management.OrderManagement.Order.OrderProcess;
  *
  * @author ³²Áø¿ì
  */
-public class VeggiesManager implements StockManager{
+public class VeggiesManager  {
     private OrderProcess op;
-
+    private Food menu;
     public VeggiesManager(OrderProcess op) {
         this.op = op;
-        op.addStockManager(this);
+//        op.addStockManager(this);
     }
     
-    
+    public Food getMenu(){
+        return menu;
+    }
     public void update(Food menu){
         
     }
