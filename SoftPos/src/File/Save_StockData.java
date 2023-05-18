@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Management.Test.Json;
+package File;
 
 import Management.StockManagement.Stock.Stock;
 import com.google.gson.Gson;
@@ -13,9 +13,9 @@ import java.io.FileWriter;
  *
  * @author 남진우
  */
-public class StockToJson { // 임마도 임시 방편
+public class Save_StockData {
 
-    public StockToJson(Stock stock) {
+    public Save_StockData(Stock stock) {
         try{
             Gson gs = new Gson();
             File file = new File("Stocks.json");
@@ -30,7 +30,6 @@ public class StockToJson { // 임마도 임시 방편
         }catch(Exception e){
             e.printStackTrace();
         }
-        
     }
     
 }

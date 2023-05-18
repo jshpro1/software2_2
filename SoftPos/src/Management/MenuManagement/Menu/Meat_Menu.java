@@ -3,26 +3,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Management.MenuManagement.Menu;
-
-
-import Management.StockManagement.Stock.Stock;
+import Management.StockManagement.Stock.Meat;
 import java.util.ArrayList;
 
-
 /**
- * 5/ 16 메뉴 상위 클래스
+ *
  * @author 남진우
  */
+public abstract class Meat_Menu extends Food{
 
-
-public abstract class Food { //메뉴
-
-    public String name;
-    public int price;
-    public ArrayList main_stock;
-    public ArrayList<Stock> material;
+    public ArrayList<Meat> main_stock;
     
-    public abstract void cook();
-    
+
+    @Override
+    public void cook() {
+    }
 }
-   

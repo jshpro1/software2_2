@@ -19,14 +19,14 @@ public class SoftPos {
      */
     public static void main(String[] args) {
         
-        OrderProcess op = new OrderProcess();
-        CerealsManager cm = new CerealsManager(op);
-        
-        op.getMenu(new PorkFriedRice());
-        op.notifyStockManager();
-        cm.count();
-        
-        
+//        // model 0516
+//        OrderProcess op = new OrderProcess();
+//        CerealsManager cm = new CerealsManager(op);
+//        
+//        op.getMenu(new PorkFriedRice());
+//        op.notifyStockManager();
+//        cm.count();
+//        
     }
     
 }

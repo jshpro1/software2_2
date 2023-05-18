@@ -5,12 +5,20 @@
 package Management.StockManagement.manager;
 
 import Management.MenuManagement.Menu.Food;
+import Management.OrderManagement.Order.OrderProcess;
 
 /**
  *
  * @author ³²Áø¿ì
  */
 public class MeatsManager implements StockManager{
+    private OrderProcess op;
+
+    public MeatsManager(OrderProcess op) {
+        this.op = op;
+        op.addStockManager(this);
+    }
+    
     public void update(Food menu){
         
     }

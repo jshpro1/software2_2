@@ -6,7 +6,7 @@ package Management.StockManagement.manager;
 
 import Management.MenuManagement.Menu.*;
 import Management.OrderManagement.Order.OrderProcess;
-import Management.StockManagement.Stock.Basic.Stock;
+import Management.StockManagement.Stock.Stock;
 /**
  *
  * @author 남진우
@@ -26,6 +26,7 @@ public class CerealsManager implements StockManager{
     public void update(Food menu){ //임시 
         this.menu = menu;
     }
+    
     public void count(){ // 임시 재고 확인
         for(Stock material : menu.material){
             System.out.println(material.kind());

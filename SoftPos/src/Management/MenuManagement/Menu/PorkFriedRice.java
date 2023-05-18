@@ -4,11 +4,11 @@
  */
 package Management.MenuManagement.Menu;
 
-import Management.StockManagement.Stock.Basic.*;
-import Management.StockManagement.Stock.Cereals.*;
-import Management.StockManagement.Stock.Meats.*;
-import Management.StockManagement.Stock.Sauce.*;
-import Management.StockManagement.Stock.Veggies.*;
+import Management.StockManagement.Stock.Cereal;
+import Management.StockManagement.Stock.Meat;
+import Management.StockManagement.Stock.Sauce;
+import Management.StockManagement.Stock.Stock;
+import Management.StockManagement.Stock.Veggie;
 import java.util.ArrayList;
 
 /**
@@ -20,10 +20,10 @@ public class PorkFriedRice extends Food{
     public PorkFriedRice() {
         material = new ArrayList<Stock>();
         
-        material.add(new Rice());
-        material.add(new Pork());
-        material.add(new SoySauce());
-        material.add(new Onion());
+        material.add(new Cereal());
+        material.add(new Meat());
+        material.add(new Sauce());
+        material.add(new Veggie());
     }
     
     public void cook(){

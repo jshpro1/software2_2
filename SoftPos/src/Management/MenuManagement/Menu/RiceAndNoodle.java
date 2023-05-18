@@ -4,25 +4,19 @@
  */
 package Management.MenuManagement.Menu;
 
+import Management.StockManagement.Stock.Cereal;
 
-import Management.StockManagement.Stock.Stock;
 import java.util.ArrayList;
 
-
 /**
- * 5/ 16 메뉴 상위 클래스
+ *
  * @author 남진우
  */
-
-
-public abstract class Food { //메뉴
-
-    public String name;
-    public int price;
-    public ArrayList main_stock;
-    public ArrayList<Stock> material;
+public abstract class RiceAndNoodle extends Food{
+    public ArrayList<Cereal> main_stock;
     
-    public abstract void cook();
-    
+    @Override
+    public void cook(){
+        
+    }
 }
-   

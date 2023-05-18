@@ -3,16 +3,38 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/main/SoftPos.java</file>
-            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/Test/Json/StockToJson.java</file>
+            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/MenuManagement/Menu/SideDish.java</file>
             <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/StockManagement/manager/VeggiesManager.java</file>
             <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/MenuManagement/Menu/Food.java</file>
             <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/StockManagement/manager/MeatsManager.java</file>
             <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/OrderManagement/Order/OrderProcess.java</file>
-            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/StockManagement/manager/CerealsManager.java</file>
+            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/StockManagement/StockManagement.java</file>
+            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/File/Bring_StockData.java</file>
+            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/OrderManagement/Order/Order_Menu.java</file>
+            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/OrderManagement/Order/Order.java</file>
+            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/StockManagement/Stock/Stock.java</file>
+            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/Test/Json/StockToJson.java</file>
+            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/MenuManagement/update/UpdateMenu.java</file>
+            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/StockManagement/Test_Stock.java</file>
+            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/OrderManagement/Order/TakeMenu.java</file>
+            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/MenuManagement/Menu/Beverage.java</file>
+            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/StockManagement/Stock/Cereal.java</file>
+            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/StockManagement/Stock/Veggie.java</file>
+            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/main/SoftPos.java</file>
+            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/MenuManagement/Menu/Meat_Menu.java</file>
             <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/MenuManagement/Menu/PorkFriedRice.java</file>
             <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/StockManagement/manager/StockManager.java</file>
-            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/MenuManagement/Menu/Noodle.java</file>
+            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/MenuManagement/Menu/RiceAndNoodle.java</file>
+            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/StockManagement/PlaceAnOrder.java</file>
+            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/OrderManagement/Order/OrderCarculator.java</file>
+            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/MenuManagement/Menu/Salad.java</file>
+            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/StockManagement/manager/CerealsManager.java</file>
+            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/MenuManagement/Menu/Various_Menu.java</file>
+            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/StockManagement/Stock/Sauce.java</file>
+            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/StockManagement/manager/SauceManager.java</file>
+            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/StockManagement/Stock/Meat.java</file>
+            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/Management/OrderManagement/Order/Subject.java</file>
+            <file>file:/C:/Users/남진우/Desktop/gittutorial/software2_2/SoftPos/src/File/Save_StockData.java</file>
         </group>
     </open-files>
 </project-private>

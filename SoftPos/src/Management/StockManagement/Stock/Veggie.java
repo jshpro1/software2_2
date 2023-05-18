@@ -2,15 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Management.StockManagement.manager;
+package Management.StockManagement.Stock;
 
-import Management.MenuManagement.Menu.Food;
+import Management.StockManagement.Stock.Stock;
 
 /**
  *
  * @author ³²Áø¿ì
  */
-public interface StockManager {
-    
-    public void update(Food menu);
+public class Veggie extends Stock{
+    public String kind(){
+        return "Veggie";
+    }
 }
