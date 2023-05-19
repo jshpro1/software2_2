@@ -8,6 +8,7 @@ import File.*;
 import Management.MenuManagement.Menu.*;
 import Management.OrderManagement.Order.OrderProcess;
 import Management.StockManagement.Stock.*;
+import Management.StockManagement.*;
 import java.util.ArrayList;
 
 /**
@@ -20,14 +21,24 @@ public class CerealsManager implements StockManager {
     public Food menu;
     private ArrayList<Cereal> cereals;
 
-    public CerealsManager(OrderProcess op) {  // 재고 관리자 명단 구독
+    public CerealsManager(OrderProcess op) {
         this.op = op;
-        op.addStockManager(this);
+        op.addStockManager(this);  // 재고 관리자 명단 구독
+
+        bringData();
         
-        
-        cereals = new Bring_StockData().getList(); // 저장소에서 불러오기
-        
+        cereals.get(0).kind();
+        // 재고가 비었는지 확인하여 알림
+//        new StockIsEmpty(cereals); 
     }
+
+    // 저장소에서 불러오기
+    private void bringData() {
+        cereals =(ArrayList<Cereal>) new Bring_StockData("C").getList();
+    }
+
+ 
+    
 
     public Food getMenu() {
         return menu;
@@ -36,8 +47,8 @@ public class CerealsManager implements StockManager {
     public void update(Food menu) { //임시 
         this.menu = menu;
     }
-    
-    public ArrayList<Cereal> getStockList(){
+
+    public ArrayList<Cereal> getStockList() {
         return cereals;
     }
 

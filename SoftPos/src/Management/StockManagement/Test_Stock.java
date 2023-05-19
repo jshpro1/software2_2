@@ -7,8 +7,9 @@ package Management.StockManagement;
 import File.*;
 import Management.MenuManagement.Menu.PorkFriedRice;
 import Management.OrderManagement.Order.OrderProcess;
-import Management.StockManagement.Stock.Veggie;
+import Management.StockManagement.Stock.*;
 import Management.StockManagement.manager.*;
+import java.util.Scanner;
 
 /**
  *
@@ -20,20 +21,14 @@ public class Test_Stock {
 
 //         model 0516
 //        new StockManagement().makeStockData();
-
-        OrderProcess op = new OrderProcess();
-        CerealsManager cm = new CerealsManager(op);
-
-        PorkFriedRice pfr = new PorkFriedRice();
-        pfr.cook();
-        op.getMenu(pfr);
-        op.notifyStockManager();
-
-        System.out.println(cm.getStockList().get(0));
-//        for (int i = 0; i < 10; i++) {
-//            System.out.println(cm.getStockList().get(i).getPrice());
-//            
-//        }
-
+//        OrderProcess op = new OrderProcess();
+//        CerealsManager cm = new CerealsManager(op);
+//
+//        PorkFriedRice pfr = new PorkFriedRice();
+//        pfr.cook();
+//        op.getMenu(pfr);
+//        op.notifyStockManager();
+        Stock st = new Cereal("»§",266,650);
+        st.kind();
     }
 }

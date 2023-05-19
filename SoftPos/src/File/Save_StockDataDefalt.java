@@ -18,23 +18,38 @@ import java.util.ArrayList;
  */
 public class Save_StockDataDefalt {
 
-    public Save_StockDataDefalt(ArrayList<Cereal> defalt) {
-        try{
+    public Save_StockDataDefalt(ArrayList defalt, String type) {
+        try {
+            File file = null;
             Gson gs = new Gson();
-            File file = new File("Stock_Pcs.json");
-            FileWriter writer = new FileWriter(file);
-        
             
+            if (type.equals("C")) {
+                file = new File("Cereal_Pcs.json");
+                defalt = (ArrayList<Cereal>)defalt;
+            } else if (type.equals("M")) {
+                file = new File("Meat_Pcs.json");
+                defalt = (ArrayList<Meat>)defalt;
+            } else if (type.equals("V")) {
+                file = new File("Veggie_Pcs.json");
+                defalt = (ArrayList<Veggie>)defalt;
+            } else if (type.equals("S")) {
+                file = new File("Sauce_Pcs.json");
+                defalt = (ArrayList<Sauce>)defalt;
+            } else {
+                System.out.println("잘못된 타입 입니다.");
+            }
+            FileWriter writer = new FileWriter(file);
+
 //            String fileWriter = gs.toJson(stockmanager.getStockList());
-            String fileWriter = gs.toJson(defalt);
+            String fileWriter = gs.toJson((ArrayList<Cereal>)defalt);
             System.out.println(fileWriter);
 
             writer.write(fileWriter);
             writer.flush();
             writer.close();
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
-    
+
 }

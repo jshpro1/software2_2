@@ -18,5 +18,13 @@ public abstract class Stock { //재고
     public int getPrice(){
         return unit_price;
     }
+    
+    public int getPcs(){
+        return pcs;
+    }
+    
+    public String getName(){
+        return name;
+    }
     public abstract String kind(); // 임시 재고 판별책
 }

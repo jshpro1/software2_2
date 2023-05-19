@@ -26,4 +26,10 @@ public class PlaceAnOrder {
         veggieManager = new VeggiesManager(op);
     }
     
+    public void paoRequest(){ // 발주 요청
+        
+    }
+    
+    
+    
 }
