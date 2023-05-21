@@ -8,9 +8,8 @@ package DiscountManager;
  *
  * @author jsh
  */
-
 //할인 인터페이스
 public interface Discount {
+
     double applyDiscount(double price);
 }
-
