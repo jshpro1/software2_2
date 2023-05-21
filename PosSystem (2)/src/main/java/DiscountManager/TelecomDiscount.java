@@ -8,10 +8,8 @@ package DiscountManager;
  *
  * @author jsh
  */
-
 //통신사 할인 5%
 public class TelecomDiscount extends DiscountDecorator {
-    
 
     public TelecomDiscount(Discount discount) {
         super(discount);
@@ -22,4 +20,3 @@ public class TelecomDiscount extends DiscountDecorator {
         return super.applyDiscount(price * 0.95);
     }
 }
-
