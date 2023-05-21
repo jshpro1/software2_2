@@ -8,10 +8,9 @@ package DiscountManager;
  *
  * @author jsh
  */
-
 //데코레이터 클래스 생성 
-
 public abstract class DiscountDecorator implements Discount {
+
     private final Discount discount;
 
     public DiscountDecorator(Discount discount) {
@@ -20,7 +19,9 @@ public abstract class DiscountDecorator implements Discount {
 
     @Override
     public double applyDiscount(double price) {
-        return discount.applyDiscount(price);
+        if (discount != null) {
+            return discount.applyDiscount(price);
+        }
+        return price;
     }
 }
-
