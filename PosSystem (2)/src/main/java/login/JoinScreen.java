@@ -24,7 +24,7 @@ public class JoinScreen extends JFrame {
 	
 	public JoinScreen() {
 		
-		setTitle("회원관리 화면");
+		setTitle("회원관리");
 		
 		// 1. 컴포넌트들을 만들어 보자.
 		JLabel title = 
