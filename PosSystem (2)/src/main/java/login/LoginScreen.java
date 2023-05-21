@@ -22,7 +22,7 @@ public class LoginScreen extends JFrame {
 
 	public LoginScreen() {
 		
-		setTitle("제품관리 시스템");
+		setTitle("포스기 시스템");
 		
 		JPanel title = new JPanel();
 		JLabel login = new JLabel("로그인 화면");
