@@ -8,10 +8,8 @@ package DiscountManager;
  *
  * @author jsh
  */
-
 //제휴할인 3%
 public class AffiliateDiscount extends DiscountDecorator {
-    
 
     public AffiliateDiscount(Discount discount) {
         super(discount);
