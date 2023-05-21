@@ -18,13 +18,17 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.*;
 
+
 public class MonthlySalesCalculation implements SalesCalculation {
+    private int inputMonth;
+
+    public MonthlySalesCalculation(int inputMonth) {
+        this.inputMonth = inputMonth;
+    }
+
     @Override
     public int calculate(List<Sale> sales) {
         int totalSales = 0;
-        Scanner sc = new Scanner(System.in);
-        System.out.print("매출을 계산할 월을 입력하세요 (예: 1~12) : ");
-        int inputMonth = sc.nextInt();
         for (Sale sale : sales) {
             LocalDate saleDate = sale.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
             if (saleDate.getMonthValue() == inputMonth) {
