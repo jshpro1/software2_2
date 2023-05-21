@@ -8,8 +8,6 @@ package DiscountManager;
  *
  * @author jsh
  */
-
-
 //할인 적용 업는 클래스
 public class BaseDiscount implements Discount {
 
