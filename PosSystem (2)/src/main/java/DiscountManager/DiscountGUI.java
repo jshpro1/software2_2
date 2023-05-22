@@ -41,9 +41,9 @@ public class DiscountGUI extends JFrame {
 
         JPanel discountPanel = new JPanel();
         discountPanel.setLayout(new BoxLayout(discountPanel, BoxLayout.Y_AXIS));
-        affiliateCheckBox = new JCheckBox("Affiliate 할인");
-        telecomCheckBox = new JCheckBox("Telecom 할인");
-        pointCheckBox = new JCheckBox("Point 할인");
+        affiliateCheckBox = new JCheckBox("제휴 할인");
+        telecomCheckBox = new JCheckBox("통신사 할인");
+        pointCheckBox = new JCheckBox("포인트 할인");
         discountPanel.add(affiliateCheckBox);
         discountPanel.add(Box.createVerticalStrut(10));
         discountPanel.add(telecomCheckBox);
