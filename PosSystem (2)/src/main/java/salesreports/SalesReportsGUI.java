@@ -24,17 +24,18 @@ import java.util.List;
 
 public class SalesReportsGUI extends JFrame {
 
-     private List<Sale> sales;
-    private JTextField textField;
+    private List<Sale> sales;
     private JTextField monthTextField;
     private JTextField weekTextField;
+    private JTextField dayTextField;
+    private JTextField resultTextField;
 
     public SalesReportsGUI(List<Sale> sales) {
         this.sales = sales;
 
         setTitle("매출 통계");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(500, 300);
+        setSize(400, 300);
         setLocationRelativeTo(null);
 
         JPanel panel = new JPanel();
@@ -42,6 +43,9 @@ public class SalesReportsGUI extends JFrame {
 
         JPanel topPanel = new JPanel();
         topPanel.setLayout(new FlowLayout());
+
+        JLabel yearLabel = new JLabel("2023년");
+        topPanel.add(yearLabel);
 
         JLabel label = new JLabel("매출 통계 선택:");
         topPanel.add(label);
@@ -53,38 +57,73 @@ public class SalesReportsGUI extends JFrame {
         comboBox.addItem("전체 매출액");
         topPanel.add(comboBox);
 
-        monthTextField = new JTextField(5);
-        topPanel.add(monthTextField);
+        JLabel monthLabel = new JLabel("월:");
+        monthTextField = new JTextField(2);
+        monthTextField.setEnabled(false); // 기본적으로 비활성화
+        JLabel weekLabel = new JLabel("주:");
+        weekTextField = new JTextField(2);
+        weekTextField.setEnabled(false); // 기본적으로 비활성화
+        JLabel dayLabel = new JLabel("일:");
+        dayTextField = new JTextField(2);
+        dayTextField.setEnabled(false); // 기본적으로 비활성화
 
-        JLabel monthLabel = new JLabel("월");
         topPanel.add(monthLabel);
-
-        weekTextField = new JTextField(5);
-        topPanel.add(weekTextField);
-
-        JLabel weekLabel = new JLabel("주");
+        topPanel.add(monthTextField);
         topPanel.add(weekLabel);
+        topPanel.add(weekTextField);
+        topPanel.add(dayLabel);
+        topPanel.add(dayTextField);
 
         JButton button = new JButton("조회");
         topPanel.add(button);
 
-        panel.add(topPanel, BorderLayout.NORTH);
-
-        textField = new JTextField();
-        textField.setEditable(false);
-        textField.setHorizontalAlignment(JTextField.CENTER);
-        Font font = new Font("Arial", Font.BOLD, 20);
-        textField.setFont(font);
-        panel.add(textField, BorderLayout.CENTER);
+        comboBox.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String selectedOption = (String) comboBox.getSelectedItem();
+                // 선택한 옵션에 따라 텍스트 필드 활성화 여부 설정
+                switch (selectedOption) {
+                    case "일일 매출액":
+                        monthTextField.setEnabled(true);
+                        dayTextField.setEnabled(true);
+                        weekTextField.setEnabled(false);
+                        break;
+                    case "주간 매출액":
+                        monthTextField.setEnabled(true);
+                        weekTextField.setEnabled(true);
+                        dayTextField.setEnabled(false);
+                        break;
+                    case "월간 매출액":
+                        monthTextField.setEnabled(true);
+                        weekTextField.setEnabled(false);
+                        dayTextField.setEnabled(false);
+                        break;
+                    default:
+                        monthTextField.setEnabled(false);
+                        weekTextField.setEnabled(false);
+                        dayTextField.setEnabled(false);
+                        break;
+                }
+            }
+        });
 
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String selectedOption = (String) comboBox.getSelectedItem();
                 int salesAmount = calculateSales(selectedOption);
-                textField.setText(Integer.toString(salesAmount));
+                resultTextField.setText(Integer.toString(salesAmount));
             }
         });
+
+        panel.add(topPanel, BorderLayout.NORTH);
+
+        resultTextField = new JTextField();
+        resultTextField.setEditable(false);
+        resultTextField.setHorizontalAlignment(JTextField.CENTER);
+        Font font = new Font("Arial", Font.BOLD, 20);
+        resultTextField.setFont(font);
+        panel.add(resultTextField, BorderLayout.CENTER);
 
         add(panel);
         setVisible(true);
@@ -94,16 +133,18 @@ public class SalesReportsGUI extends JFrame {
         SalesCalculator salesCalculator;
         switch (selectedOption) {
             case "일일 매출액":
-                salesCalculator = new SalesCalculator(new DailySalesCalculation());
+                int inputMonth1 = Integer.parseInt(monthTextField.getText());
+                int inputDay = Integer.parseInt(dayTextField.getText());
+                salesCalculator = new SalesCalculator(new DailySalesCalculation(inputMonth1, inputDay));
                 return salesCalculator.calculateSales(sales);
             case "주간 매출액":
-                int selectedMonth = Integer.parseInt(monthTextField.getText());
-                int selectedWeek = Integer.parseInt(weekTextField.getText());
-                salesCalculator = new SalesCalculator(new WeeklySalesCalculation(selectedMonth, selectedWeek));
+                int inputMonth2 = Integer.parseInt(monthTextField.getText());
+                int inputWeek = Integer.parseInt(weekTextField.getText());
+                salesCalculator = new SalesCalculator(new WeeklySalesCalculation(inputMonth2, inputWeek));
                 return salesCalculator.calculateSales(sales);
             case "월간 매출액":
-                int inputMonth = Integer.parseInt(monthTextField.getText());
-                salesCalculator = new SalesCalculator(new MonthlySalesCalculation(inputMonth));
+                int inputMonth3 = Integer.parseInt(monthTextField.getText());
+                salesCalculator = new SalesCalculator(new MonthlySalesCalculation(inputMonth3));
                 return salesCalculator.calculateSales(sales);
             case "전체 매출액":
                 return sales.stream().mapToInt(Sale::getTotalPrice).sum();
@@ -113,16 +154,13 @@ public class SalesReportsGUI extends JFrame {
     }
 
     public static void main(String[] args) {
-        // sales.txt 파일에서 데이터를 읽어온 후 SalesReportsGUI를 생성하여 GUI를 실행합니다.
         List<Sale> sales = readSalesFromFile("sales.txt");
         SwingUtilities.invokeLater(() -> new SalesReportsGUI(sales));
     }
 
-    private static List<Sale> readSalesFromFile(String fileName) {
-        // 파일에서 데이터를 읽어와서 Sale 객체의 리스트를 생성합니다.
-        // 이 부분은 기존의 코드와 동일합니다.
+    private static List<Sale> readSalesFromFile(String filePath) {
         List<Sale> sales = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;
             while ((line = br.readLine()) != null) {
                 String[] tokens = line.split(",");
@@ -139,3 +177,4 @@ public class SalesReportsGUI extends JFrame {
         return sales;
     }
 }
+
