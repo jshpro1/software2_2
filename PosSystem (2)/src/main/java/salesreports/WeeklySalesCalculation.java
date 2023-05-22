@@ -13,9 +13,6 @@ import java.time.LocalDate;
 import java.time.YearMonth;
 import java.time.ZoneId;
 import java.util.List;
-import java.util.Scanner;
-
-import java.util.List;
 
 public class WeeklySalesCalculation implements SalesCalculation {
     private int selectedMonth;
