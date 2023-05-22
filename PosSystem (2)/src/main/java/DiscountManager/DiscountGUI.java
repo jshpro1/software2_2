@@ -63,7 +63,7 @@ public class DiscountGUI extends JFrame {
         JPanel bottomPanel = new JPanel(new FlowLayout());
         JLabel discountpriceLabel = new JLabel("할인된 가격: ");
         discountedPriceTextField = new JTextField(10);
-        bottomPanel.add(priceLabel);
+        bottomPanel.add(discountpriceLabel);
         discountedPriceTextField.setEditable(false);
         bottomPanel.add(discountedPriceTextField);
 
