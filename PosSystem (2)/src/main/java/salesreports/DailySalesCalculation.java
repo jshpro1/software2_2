@@ -8,24 +8,26 @@ package salesreports;
  *
  * @author jsh
  */
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.DayOfWeek;
+
 import java.time.LocalDate;
 import java.time.ZoneId;
-import java.util.*;
+import java.util.List;
 
-class DailySalesCalculation implements SalesCalculation {
+public class DailySalesCalculation implements SalesCalculation {
+    private int inputMonth;
+    private int inputDay;
+
+    public DailySalesCalculation(int inputMonth, int inputDay) {
+        this.inputMonth = inputMonth;
+        this.inputDay = inputDay;
+    }
+
     @Override
     public int calculate(List<Sale> sales) {
         int totalSales = 0;
-        LocalDate today = LocalDate.now();
         for (Sale sale : sales) {
             LocalDate saleDate = sale.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-            if (saleDate.equals(today)) {
+            if (saleDate.getMonthValue() == inputMonth && saleDate.getDayOfMonth() == inputDay) {
                 totalSales += sale.getTotalPrice();
             }
         }
