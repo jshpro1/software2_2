@@ -8,11 +8,10 @@ package PaymentManager;
  *
  * @author USER
  */
-import java.util.*;
-
 public class Main {
     public static void main(String[] args) {
-        PayManager menuManager = new PayManager();
-        menuManager.run();
+        String filePath = "payInfo.txt";
+        PaymentManager paymentManager = new PaymentManager(filePath);
+        paymentManager.run();
     }
 }

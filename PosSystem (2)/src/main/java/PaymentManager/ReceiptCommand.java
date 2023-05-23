@@ -2,27 +2,25 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package MenuManager;
+package PaymentManager;
+
 
 /**
  *
  * @author USER
  */
 import java.util.*;
-import java.util.*;
 
-public class AddMenuCommand implements Command{
-    private Menu menu = new Menu();
-    private Map<String[], Integer[]> menus;
+public class ReceiptCommand implements Command{
+    private Payment pay = new Payment();
+    private Map<Integer, String[]> payinfo;
     private Scanner scanner;
-
-    public AddMenuCommand(Map<String[], Integer[]> menus, Scanner scanner) {
-        this.menus = menus;
-        this.scanner = scanner;
-        
-    }
     
+    public ReceiptCommand(Map<Integer, String[]> payinfo, Scanner scanner) {
+        this.payinfo = payinfo;
+        this.scanner = scanner;
+    }
     public void execute(){
-        menu.addMenu(menus, scanner);
+        pay.Receipt(payinfo, scanner);
     }
 }

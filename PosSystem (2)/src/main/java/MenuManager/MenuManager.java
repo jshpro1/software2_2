@@ -4,14 +4,12 @@
  */
 package MenuManager;
 
-
 /**
  *
  * @author USER
  */
-
-import java.io.*;
 import java.util.*;
+import java.io.*;
 
 public class MenuManager {
     private Map<String[], Integer[]> menus;
@@ -28,7 +26,7 @@ public class MenuManager {
         commands.put("add", new AddMenuCommand(menus, scanner));
         commands.put("update", new UpdateMenuCommand(menus, scanner));
         commands.put("delete", new DeleteMenuCommand(menus, scanner));
-        commands.put("show", new ShowMenuCommand(menus, scanner));
+        commands.put("show", new ShowMenuCommand(menus));
     }
 
     public void run() {
@@ -68,14 +66,12 @@ public class MenuManager {
                     System.out.println("잘못된 형식의 메뉴 정보입니다: " + line);
                     continue;
                 }
-                
-                
+
                 String menuType = parts[0].trim();
                 String menuName = parts[1].trim();
                 int price = Integer.parseInt(parts[2].trim());
                 int stock = Integer.parseInt(parts[3].trim());
-                
-                
+
                 menus.put(new String[]{menuType, menuName}, new Integer[]{price, stock});
             }
         } catch (FileNotFoundException e) {
@@ -92,10 +88,8 @@ public class MenuManager {
                 String menuName = entry.getKey()[1];
                 int price = entry.getValue()[0];
                 int stock = entry.getValue()[1];
-                
-                
-                writer.printf("%s,%s,%d,%d\n", menuType,menuName, price, stock);
-                
+
+                writer.printf("%s,%s,%d,%d\n", menuType, menuName, price, stock);
             }
             System.out.println("메뉴 정보가 저장되었습니다.");
         } catch (IOException e) {
