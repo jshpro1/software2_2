@@ -4,7 +4,8 @@
  */
 package Management.OrderManagement.Order;
 
-import Management.MenuManagement.Menu.Food;
+import Management.MenuManagement.Menu.*;
+import Management.MenuManagement.Menu.Menu;
 import Management.StockManagement.manager.StockManager;
 
 
@@ -17,7 +18,7 @@ import java.util.ArrayList;
 public class OrderProcess implements Subject{ // 일단 재고 처리 관련 기능
     
     private ArrayList<StockManager> stockmanagers; //재고 관리자 명단
-    public Food menu ; // 처리할 메뉴
+    public Menu menu ; // 처리할 메뉴
 
     public OrderProcess() { // 명단 생성
         stockmanagers = new ArrayList<StockManager>();
@@ -37,7 +38,7 @@ public class OrderProcess implements Subject{ // 일단 재고 처리 관련 기능
             all_sm.update(menu);
         }
     }
-    public void getMenu(Food menu){ // 임시 메뉴 입력 받기
+    public void getMenu(Menu menu){ // 임시 메뉴 입력 받기
         this.menu = menu;
     }
     

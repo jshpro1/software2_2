@@ -4,7 +4,7 @@
  */
 package Management.StockManagement.manager;
 
-import Management.MenuManagement.Menu.Food;
+import Management.MenuManagement.Menu.*;
 import java.util.ArrayList;
 
 /**
@@ -13,7 +13,10 @@ import java.util.ArrayList;
  */
 public interface StockManager {
     
-    public void update(Food menu);
-    public Food getMenu();
-    public ArrayList getStockList();
+    public void update(Menu menu);
+    public Menu getMenu();
+    public String identify();
+    public StockList getStocksList();
+    
+    
 }

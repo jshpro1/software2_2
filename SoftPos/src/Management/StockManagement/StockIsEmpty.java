@@ -22,6 +22,5 @@ public class StockIsEmpty {
     }
     public void notifycation(Stock stk) {
         System.out.println(stk.getName() + "의 재고가 비어있음");
-        System.out.print("발주 신청을 하시겠습니까?");
     }
 }

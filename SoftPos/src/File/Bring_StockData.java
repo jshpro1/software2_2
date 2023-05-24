@@ -4,54 +4,101 @@
  */
 package File;
 
-import Management.StockManagement.Stock.Cereal;
+import Management.StockManagement.*;
 import Management.StockManagement.manager.*;
+import Management.StockManagement.Stock.*;
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import java.io.BufferedReader;
 import java.io.File;
+import java.lang.reflect.Type;
 import java.io.FileReader;
 import java.io.Reader;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 /**
  *
  * @author 남진우
  */
 public class Bring_StockData {
-
-    ArrayList al;
+    
+    public StockList slist;
 
     public Bring_StockData(String type) {
+       
         try {
+
+            String result = null ;
+            StringBuilder sbuild = new StringBuilder();
+//            Reader rd = null;
             
+//            switch (sm.identify()) {
+//                case "Staple":
+//                    rd = new FileReader(".\\Staple_Pcs.json");
+//                    break;
+//                case "Meat":
+//                    rd = new FileReader(".\\Meat_Pcs.json");
+//                    break;
+//                case "Veggie":
+//                    rd = new FileReader(".\\Veggie_Pcs.json");
+//                    break;
+//                case "Sauce":
+//                    rd = new FileReader(".\\Sauce_Pcs.json");
+//                    break;
+//                default:
+//                    break;
+//            }
 
-//            String result = new BufferedReader(new FileReader(".\\playful_itmes.txt")).readLine();
-//            it = new Gson().fromJson(result,Item.class);
-//            System.out.println(result);
-            Reader rd = null;
-
-            if (type.equals("C")) {
-                rd = new FileReader(".\\Cereal_Pcs.json");
-            } else if (type.equals("M")) {
-                rd = new FileReader(".\\Meat_Pcs.json");
-            } else if (type.equals("V")) {
-                rd = new FileReader(".\\Veggie_Pcs.json");
-            } else if (type.equals("S")) {
-                rd = new FileReader(".\\Sauce_Pcs.json");
-            } else {
-                System.out.println("잘못된 타입 입니다.");
+            Type stockListType = null;
+            switch (type) {
+                case "Staple":
+                    result = new BufferedReader(new FileReader(".\\Staple_Pcs.json")).readLine();
+                    stockListType = new TypeToken<ArrayList<Staple>>(){}.getType();
+                    break;
+                case "Meat":
+                    result = new BufferedReader(new FileReader(".\\Meat_Pcs.json")).readLine();
+                    stockListType = new TypeToken<ArrayList<Meat>>(){}.getType();
+                    break;
+                case "Veggie":
+                    result = new BufferedReader(new FileReader(".\\Veggie_Pcs.json")).readLine();
+                    stockListType = new TypeToken<ArrayList<Veggie>>(){}.getType();
+                    break;
+                case "Sauce":
+                    result = new BufferedReader(new FileReader(".\\Sauce_Pcs.json")).readLine();
+                    stockListType = new TypeToken<ArrayList<Sauce>>(){}.getType();
+                    break;
+                default:
+                    break;
             }
-
-            al = (ArrayList<Cereal>)(new Gson().fromJson(rd, ArrayList.class));
-            System.out.println(rd);
-
+            
+            sbuild.append(result);
+            slist = new StockList();
+            slist.stocks = new Gson().fromJson(result, stockListType);
+           /*
+            0521 오류 수정
+            */
+//            System.out.println(((Stock)slist.stocks.get(0)).getPcs());
+            
+            
         } catch (Exception e) {
             e.printStackTrace();
         }
+        
     }
-
-    public ArrayList getList() {
-        return al;
+    public ArrayList<Stock> bringStocksList(){
+        return slist.stocks;
     }
-
+    public ArrayList<Staple> bringStapleList(){
+        return slist.stocks;
+    }
+    public ArrayList<Meat> bringMeatList(){
+        return slist.stocks;
+    }
+    public ArrayList<Sauce> bringSauceList(){
+        return slist.stocks;
+    }
+    public ArrayList<Veggie> bringVeggieList(){
+        return slist.stocks;
+    }
+    
 }

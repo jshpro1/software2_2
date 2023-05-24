@@ -5,11 +5,10 @@
 package Management.StockManagement;
 
 import File.*;
-import Management.MenuManagement.Menu.PorkFriedRice;
 import Management.OrderManagement.Order.OrderProcess;
 import Management.StockManagement.Stock.*;
 import Management.StockManagement.manager.*;
-import java.util.Scanner;
+import java.util.ArrayList;
 
 /**
  *
@@ -19,16 +18,13 @@ public class Test_Stock {
 
     public static void main(String[] args) {
 
-//         model 0516
-//        new StockManagement().makeStockData();
-//        OrderProcess op = new OrderProcess();
-//        CerealsManager cm = new CerealsManager(op);
-//
-//        PorkFriedRice pfr = new PorkFriedRice();
-//        pfr.cook();
-//        op.getMenu(pfr);
-//        op.notifyStockManager();
-        Stock st = new Cereal("»§",266,650);
-        st.kind();
+        OrderProcess op = new OrderProcess();
+        StaplesManager sm = new StaplesManager(op);
+        new MakeStockData(sm);
+        
+//        new MakeStockData(new MeatsManager(op));
+//        new MakeStockData(new SauceManager(op));
+//        new MakeStockData(new VeggiesManager(op));
+
     }
 }

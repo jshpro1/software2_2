@@ -4,25 +4,52 @@
  */
 package Management.StockManagement.manager;
 
-import Management.MenuManagement.Menu.Food;
+import File.Bring_StockData;
+import Management.MenuManagement.Menu.*;
 import Management.OrderManagement.Order.OrderProcess;
 
 /**
  *
  * @author 남진우
  */
-public class VeggiesManager  {
+public class VeggiesManager implements StockManager {
     private OrderProcess op;
-    private Food menu;
+    private Menu menu;
+    public StockList slist;
     public VeggiesManager(OrderProcess op) {
         this.op = op;
-//        op.addStockManager(this);
+        op.addStockManager(this);
+        slist = new StockList();
+
+        bringData();
+
+        // 재고가 비었는지 확인하여 알림
+//        new StockIsEmpty(cereals); 
     }
-    
-    public Food getMenu(){
+
+    // 저장소에서 불러오기
+    private void bringData() {
+//        slist.stocks = new Bring_StockData(this.identify()).bringStocksList();
+        new Bring_StockData(this.identify());
+    }
+
+    @Override
+    public String identify() { //정체성확인
+        return "Veggie";
+    }
+
+    @Override
+    public Menu getMenu() {
         return menu;
     }
-    public void update(Food menu){
-        
+
+    @Override
+    public void update(Menu menu) { //임시 
+        this.menu = menu;
+    }
+
+    @Override
+    public StockList getStocksList() {
+        return slist;
     }
 }

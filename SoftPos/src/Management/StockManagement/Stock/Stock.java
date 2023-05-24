@@ -19,6 +19,10 @@ public abstract class Stock { //Àç°í
         return unit_price;
     }
     
+    public int getKcal(){
+        return kcal;
+    }
+    
     public int getPcs(){
         return pcs;
     }

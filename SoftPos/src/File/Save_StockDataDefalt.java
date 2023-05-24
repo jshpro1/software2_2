@@ -4,13 +4,10 @@
  */
 package File;
 
-import Management.StockManagement.Stock.*;
-import Management.StockManagement.Stock.Stock;
-import Management.StockManagement.manager.StockManager;
+import Management.StockManagement.manager.*;
 import com.google.gson.Gson;
 import java.io.File;
 import java.io.FileWriter;
-import java.util.ArrayList;
 
 /**
  *
@@ -18,30 +15,25 @@ import java.util.ArrayList;
  */
 public class Save_StockDataDefalt {
 
-    public Save_StockDataDefalt(ArrayList defalt, String type) {
+    public Save_StockDataDefalt(StockList slist,String type) {
         try {
             File file = null;
             Gson gs = new Gson();
             
-            if (type.equals("C")) {
-                file = new File("Cereal_Pcs.json");
-                defalt = (ArrayList<Cereal>)defalt;
-            } else if (type.equals("M")) {
+            if (type.equals("Staple")) {
+                file = new File("Staple_Pcs.json");
+            } else if (type.equals("Meat")) {
                 file = new File("Meat_Pcs.json");
-                defalt = (ArrayList<Meat>)defalt;
-            } else if (type.equals("V")) {
+            } else if (type.equals("Veggie")) {
                 file = new File("Veggie_Pcs.json");
-                defalt = (ArrayList<Veggie>)defalt;
-            } else if (type.equals("S")) {
+            } else if (type.equals("Sauce")) {
                 file = new File("Sauce_Pcs.json");
-                defalt = (ArrayList<Sauce>)defalt;
             } else {
                 System.out.println("잘못된 타입 입니다.");
             }
             FileWriter writer = new FileWriter(file);
 
-//            String fileWriter = gs.toJson(stockmanager.getStockList());
-            String fileWriter = gs.toJson((ArrayList<Cereal>)defalt);
+            String fileWriter = gs.toJson(slist.stocks);
             System.out.println(fileWriter);
 
             writer.write(fileWriter);

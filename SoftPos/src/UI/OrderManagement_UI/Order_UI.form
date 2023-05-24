@@ -1,0 +1,867 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Container class="javax.swing.JPanel" name="jPanel2">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="jScrollPane3" pref="0" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="jScrollPane4" min="-2" pref="151" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="jButton19" min="-2" pref="40" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jButton20" min="-2" pref="40" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jButton21" min="-2" pref="40" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="jTextField2" alignment="0" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jButton22" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jButton23" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jButton24" min="-2" pref="40" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jButton26" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jButton27" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jButton25" min="-2" pref="40" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jButton29" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jButton30" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jButton28" min="-2" pref="40" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jButton31" pref="52" max="32767" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="jScrollPane3" min="-2" pref="208" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="jTextField2" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jButton19" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="jButton20" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="jButton21" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jButton22" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="jButton23" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="jButton24" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jButton26" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="jButton27" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="jButton25" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jButton29" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="jButton30" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="jButton28" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Component id="jScrollPane4" alignment="0" pref="0" max="32767" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="-2" pref="122" max="-2" attributes="0"/>
+                          <Component id="jButton31" min="-2" pref="87" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="OrderTable1">
+              <Properties>
+                <Property name="autoCreateRowSorter" type="boolean" value="true"/>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="new javax.swing.table.DefaultTableModel(&#xa;    new Object [][] {&#xa;&#xa;    },&#xa;    new String [] {&#xa;        &quot;*&quot;,&quot;&#xba54;&#xb274;&#xba85;&quot;,&quot;&#xb2e8;&#xac00;&quot;,&quot;&#xc218;&#xb7c9;&quot;,&quot;&#xd560;&#xc778;&quot;,&quot;&#xae08;&#xc561;&quot;&#xa;    }&#xa;)" type="code"/>
+                </Property>
+                <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                  <TableColumnModel selectionModel="0"/>
+                </Property>
+                <Property name="enabled" type="boolean" value="false"/>
+                <Property name="fillsViewportHeight" type="boolean" value="true"/>
+                <Property name="rowSelectionAllowed" type="boolean" value="false"/>
+                <Property name="showGrid" type="boolean" value="false"/>
+                <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                  <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="Order_UI_OrderTable"/>
+              </AuxValues>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane4">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="jTable2">
+              <Properties>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="new javax.swing.table.DefaultTableModel(&#xa;    new Object [][] {&#xa;        {&quot;&#xcd1d; &#xae08; &#xc561;&quot;, null},&#xa;        {&quot;&#xd560;&#xc778;&#xae08;&#xc561;&quot;, null},&#xa;        {&quot;&#xbc1b;&#xc744;&#xae08;&#xc561;&quot;, null},&#xa;        {&quot;&#xbc1b;&#xc740;&#xae08;&#xc561;&quot;, null},&#xa;        {&quot;&#xac70;&#xc2a4;&#xb984;&#xb3c8;&quot;, null}&#xa;    },&#xa;    new String [] {&#xa;        &quot;&#xacb0;&#xc81c;&quot;, &quot;&#xc815;&#xbcf4;&quot;&#xa;    }&#xa;)" type="code"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jTable1.setRowHeight(33);&#xa;amountsmodel = (DefaultTableModel) jTable1.getModel();"/>
+              </AuxValues>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JButton" name="jButton19">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTextField2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jTextField1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton20">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="2"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton21">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="3"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton22">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="4"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton23">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="5"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton24">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="6"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton25">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="9"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton26">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="7"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton27">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="8"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton28">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="C"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton29">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&lt;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton30">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="0"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton31">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="ent"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton31ActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="0" pref="12" max="32767" attributes="0"/>
+              <Component id="jPanel1" min="-2" pref="461" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="jScrollPane2" min="-2" pref="151" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Component id="jButton1" min="-2" pref="40" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jButton2" min="-2" pref="40" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jButton3" min="-2" pref="40" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="jTextField1" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <Component id="jButton4" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jButton5" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jButton6" min="-2" pref="40" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jButton8" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jButton9" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jButton7" min="-2" pref="40" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jButton11" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jButton12" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jButton10" min="-2" pref="40" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="Enter_btn" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Component id="jScrollPane1" min="-2" pref="359" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="24" pref="6" max="32767" attributes="0"/>
+                  <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="jPanel3" alignment="0" max="32767" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="jScrollPane1" min="-2" pref="208" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="jTextField1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jButton1" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <Component id="jButton2" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <Component id="jButton3" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jButton4" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <Component id="jButton5" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <Component id="jButton6" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jButton8" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <Component id="jButton9" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <Component id="jButton7" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jButton11" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <Component id="jButton12" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <Component id="jButton10" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Component id="jScrollPane2" pref="0" max="32767" attributes="0"/>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace min="-2" pref="122" max="-2" attributes="0"/>
+                                  <Component id="Enter_btn" min="-2" pref="87" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="OrderTable">
+              <Properties>
+                <Property name="autoCreateRowSorter" type="boolean" value="true"/>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor" postCode="OrderTable.getColumnModel().getColumn(0).setPreferredWidth(20);&#xa;OrderTable.getColumnModel().getColumn(1).setPreferredWidth(100);">
+                  <Connection code="new javax.swing.table.DefaultTableModel(&#xa;    new Object [][] {&#xa;&#xa;    },&#xa;    new String [] {&#xa;        &quot;*&quot;,&quot;&#xba54;&#xb274;&#xba85;&quot;,&quot;&#xb2e8;&#xac00;&quot;,&quot;&#xc218;&#xb7c9;&quot;,&quot;&#xd560;&#xc778;&quot;,&quot;&#xae08;&#xc561;&quot;&#xa;    }&#xa;)" type="code"/>
+                </Property>
+                <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                  <TableColumnModel selectionModel="0"/>
+                </Property>
+                <Property name="enabled" type="boolean" value="false"/>
+                <Property name="fillsViewportHeight" type="boolean" value="true"/>
+                <Property name="rowSelectionAllowed" type="boolean" value="false"/>
+                <Property name="showGrid" type="boolean" value="false"/>
+                <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                  <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="Order_UI_OrderTable"/>
+              </AuxValues>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="jTable1">
+              <Properties>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="new javax.swing.table.DefaultTableModel(&#xa;    new Object [][] {&#xa;        {&quot;&#xcd1d; &#xae08; &#xc561;&quot;, null},&#xa;        {&quot;&#xd560;&#xc778;&#xae08;&#xc561;&quot;, null},&#xa;        {&quot;&#xbc1b;&#xc744;&#xae08;&#xc561;&quot;, null},&#xa;        {&quot;&#xbc1b;&#xc740;&#xae08;&#xc561;&quot;, null},&#xa;        {&quot;&#xac70;&#xc2a4;&#xb984;&#xb3c8;&quot;, null}&#xa;    },&#xa;    new String [] {&#xa;        &quot;&#xacb0;&#xc81c;&quot;, &quot;&#xc815;&#xbcf4;&quot;&#xa;    }&#xa;)" type="code"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jTable1.setRowHeight(33);&#xa;amountsmodel = (DefaultTableModel) jTable1.getModel();"/>
+              </AuxValues>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JButton" name="jButton1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTextField1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jTextField1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="2"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton3">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="3"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton4">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="4"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton5">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="5"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton6">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="6"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton7">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="9"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton8">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="7"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton9">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="8"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton10">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="C"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton11">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&lt;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton12">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="0"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="Enter_btn">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Enter"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Enter_btnActionPerformed"/>
+          </Events>
+        </Component>
+        <Container class="javax.swing.JPanel" name="jPanel3">
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="Category1" min="-2" pref="62" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Category2" min="-2" pref="62" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Category3" min="-2" pref="62" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Category6" min="-2" pref="62" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Category5" min="-2" pref="62" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="menu1" min="-2" pref="62" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="menu2" min="-2" pref="62" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="menu3" min="-2" pref="62" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="menu4" min="-2" pref="62" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="menu5" min="-2" pref="62" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="menu7" min="-2" pref="62" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="menu8" min="-2" pref="62" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="menu9" min="-2" pref="62" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="menu10" min="-2" pref="62" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="menu6" min="-2" pref="62" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="menu15" min="-2" pref="62" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="menu11" min="-2" pref="62" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="menu14" min="-2" pref="62" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="menu13" min="-2" pref="62" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="menu12" min="-2" pref="62" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="menu16" min="-2" pref="62" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="menu19" min="-2" pref="62" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="menu18" min="-2" pref="62" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="menu20" min="-2" pref="62" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="menu21" min="-2" pref="62" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="16" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="Category1" alignment="3" min="-2" pref="58" max="-2" attributes="0"/>
+                          <Component id="Category2" alignment="3" min="-2" pref="58" max="-2" attributes="0"/>
+                          <Component id="Category3" alignment="3" min="-2" pref="58" max="-2" attributes="0"/>
+                          <Component id="Category5" alignment="3" min="-2" pref="58" max="-2" attributes="0"/>
+                          <Component id="Category6" alignment="3" min="-2" pref="58" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="menu1" alignment="3" min="-2" pref="58" max="-2" attributes="0"/>
+                          <Component id="menu2" alignment="3" min="-2" pref="58" max="-2" attributes="0"/>
+                          <Component id="menu3" alignment="3" min="-2" pref="58" max="-2" attributes="0"/>
+                          <Component id="menu4" alignment="3" min="-2" pref="58" max="-2" attributes="0"/>
+                          <Component id="menu5" alignment="3" min="-2" pref="58" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="menu7" alignment="3" min="-2" pref="58" max="-2" attributes="0"/>
+                          <Component id="menu8" alignment="3" min="-2" pref="58" max="-2" attributes="0"/>
+                          <Component id="menu9" alignment="3" min="-2" pref="58" max="-2" attributes="0"/>
+                          <Component id="menu10" alignment="3" min="-2" pref="58" max="-2" attributes="0"/>
+                          <Component id="menu6" alignment="3" min="-2" pref="58" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="menu15" alignment="3" min="-2" pref="58" max="-2" attributes="0"/>
+                          <Component id="menu11" alignment="3" min="-2" pref="58" max="-2" attributes="0"/>
+                          <Component id="menu14" alignment="3" min="-2" pref="58" max="-2" attributes="0"/>
+                          <Component id="menu13" alignment="3" min="-2" pref="58" max="-2" attributes="0"/>
+                          <Component id="menu12" alignment="3" min="-2" pref="58" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="menu16" alignment="3" min="-2" pref="58" max="-2" attributes="0"/>
+                          <Component id="menu19" alignment="3" min="-2" pref="58" max="-2" attributes="0"/>
+                          <Component id="menu18" alignment="3" min="-2" pref="58" max="-2" attributes="0"/>
+                          <Component id="menu20" alignment="3" min="-2" pref="58" max="-2" attributes="0"/>
+                          <Component id="menu21" alignment="3" min="-2" pref="58" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JButton" name="Category1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="R&amp;Ns"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="Category2">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Meats"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Category2ActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="Category3">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Sides"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="Category5">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#xc74c;&#xb8cc;"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="menu1">
+              <Properties>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="&quot;&quot;" type="code"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="menu1.setEnabled(false);"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="menu2">
+              <Properties>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="&quot;&quot;" type="code"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="menu2.setEnabled(false);"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="menu3">
+              <Properties>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="&quot;&quot;" type="code"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="menu1.setEnabled(false);"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="menu4">
+              <Properties>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="&quot;&quot;" type="code"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="menu1.setEnabled(false);"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="menu5">
+              <Properties>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="&quot;&quot;" type="code"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="menu1.setEnabled(false);"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="menu6">
+              <Properties>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="&quot;&quot;" type="code"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="menu1.setEnabled(false);"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="menu7">
+              <Properties>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="&quot;&quot;" type="code"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="menu1.setEnabled(false);"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="menu8">
+              <Properties>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="&quot;&quot;" type="code"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="menu1.setEnabled(false);"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="menu9">
+              <Properties>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="&quot;&quot;" type="code"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="menu1.setEnabled(false);"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="menu10">
+              <Properties>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="&quot;&quot;" type="code"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="menu1.setEnabled(false);"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="menu11">
+              <Properties>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="&quot;&quot;" type="code"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="menu1.setEnabled(false);"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="menu12">
+              <Properties>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="&quot;&quot;" type="code"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="menu1.setEnabled(false);"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="menu13">
+              <Properties>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="&quot;&quot;" type="code"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="menu1.setEnabled(false);"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="menu14">
+              <Properties>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="&quot;&quot;" type="code"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="menu1.setEnabled(false);"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="menu15">
+              <Properties>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="&quot;&quot;" type="code"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="menu1.setEnabled(false);"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="menu16">
+              <Properties>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="&quot;&quot;" type="code"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="menu1.setEnabled(false);"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="menu18">
+              <Properties>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="&quot;&quot;" type="code"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="menu1.setEnabled(false);"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="menu19">
+              <Properties>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="&quot;&quot;" type="code"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="menu1.setEnabled(false);"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="menu20">
+              <Properties>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="&quot;&quot;" type="code"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="menu1.setEnabled(false);"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="Category6">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Sides"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="menu21">
+              <Properties>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="&quot;&quot;" type="code"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="menu1.setEnabled(false);"/>
+              </AuxValues>
+            </Component>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>

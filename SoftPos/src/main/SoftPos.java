@@ -4,7 +4,6 @@
  */
 package main;
 
-import Management.MenuManagement.Menu.PorkFriedRice;
 import Management.OrderManagement.Order.*;
 import Management.StockManagement.manager.*;
 

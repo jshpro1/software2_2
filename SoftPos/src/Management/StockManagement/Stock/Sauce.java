@@ -4,8 +4,6 @@
  */
 package Management.StockManagement.Stock;
 
-import Management.StockManagement.Stock.Stock;
-
 /**
  *
  * @author ³²Áø¿ì
@@ -17,7 +15,9 @@ public class Sauce extends Stock{
         this.kcal = kcal;
         this.unit_price = unit_price;
     }
-    
+    public int getPrice(){
+        return unit_price;
+    }
     
     public String kind(){
         return "Sauce";
