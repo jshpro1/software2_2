@@ -9,11 +9,11 @@ package DiscountManager;
  * @author jsh
  */
 //포인트 할인
-public class PointDiscount extends DiscountDecorator {
+public class CashDiscount extends DiscountDecorator {
 
     private final double point;
 
-    public PointDiscount(Discount discount, double point) {
+    public CashDiscount(Discount discount, double point) {
         super(discount);
         this.point = point;
     }
