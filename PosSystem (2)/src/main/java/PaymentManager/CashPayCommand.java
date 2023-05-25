@@ -12,15 +12,11 @@ import java.util.*;
 
 public class CashPayCommand implements Command{
     private Payment pay = new Payment();
-    private Map<Integer, String[]> payinfo;
-    private Scanner scanner;
-
-    public CashPayCommand(Map<Integer, String[]> payinfo, Scanner scanner) {
-        this.payinfo = payinfo;
-        this.scanner = scanner;
+    
+    public CashPayCommand() {
     }
     
     public void execute(){
-        pay.CashPay(payinfo, scanner);
+        pay.CashPay();
     }
 }

@@ -12,15 +12,11 @@ import java.util.*;
 
 public class MobilePayCommand implements Command{
     private Payment pay = new Payment();
-    private Map<Integer, String[]> payinfo;
-    private Scanner scanner;
 
-    public MobilePayCommand(Map<Integer, String[]> payinfo, Scanner scanner) {
-        this.payinfo = payinfo;
-        this.scanner = scanner;
+    public MobilePayCommand() {
     }
     
     public void execute(){
-        pay.MobilePay(payinfo, scanner);
+        pay.MobilePay();
     }
 }

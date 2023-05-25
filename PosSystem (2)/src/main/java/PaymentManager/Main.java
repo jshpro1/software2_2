@@ -10,8 +10,10 @@ package PaymentManager;
  */
 public class Main {
     public static void main(String[] args) {
-        String filePath = "payInfo.txt";
-        PaymentManager paymentManager = new PaymentManager(filePath);
-        paymentManager.run();
+        //PaymentManager PaymentManager = new PaymentManager();
+        //PaymentManager.start();
+        PaymentJFrame payUI = new PaymentJFrame();
+        
+        payUI.setVisible(true);
     }
 }

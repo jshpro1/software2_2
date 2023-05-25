@@ -13,14 +13,12 @@ import java.util.*;
 
 public class ReceiptCommand implements Command{
     private Payment pay = new Payment();
-    private Map<Integer, String[]> payinfo;
     private Scanner scanner;
     
-    public ReceiptCommand(Map<Integer, String[]> payinfo, Scanner scanner) {
-        this.payinfo = payinfo;
+    public ReceiptCommand(Scanner scanner) {
         this.scanner = scanner;
     }
     public void execute(){
-        pay.Receipt(payinfo, scanner);
+        pay.showReceipt(scanner);
     }
 }
