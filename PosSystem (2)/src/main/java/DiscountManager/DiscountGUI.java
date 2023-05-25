@@ -19,9 +19,11 @@ public class DiscountGUI extends JFrame {
     private JTextField discountedPriceTextField;
     private JButton applyButton;
     private JCheckBox affiliateCheckBox;
+    private JComboBox<String> affiliateComboBox; // 제휴 할인 콤보박스
     private JCheckBox telecomCheckBox;
-    private JCheckBox pointCheckBox;
-    private JTextField pointTextField;
+    private JComboBox<String> telecomComboBox; // 통신사 할인 콤보박스
+    private JCheckBox cashCheckBox;
+    private JTextField cashTextField;
 
     public DiscountGUI() {
         setTitle("할인 적용");
@@ -41,46 +43,67 @@ public class DiscountGUI extends JFrame {
 
         JPanel discountPanel = new JPanel();
         discountPanel.setLayout(new BoxLayout(discountPanel, BoxLayout.Y_AXIS));
-        affiliateCheckBox = new JCheckBox("제휴 할인");
-        telecomCheckBox = new JCheckBox("통신사 할인");
-        pointCheckBox = new JCheckBox("포인트 할인");
-        discountPanel.add(affiliateCheckBox);
-        discountPanel.add(Box.createVerticalStrut(10));
-        discountPanel.add(telecomCheckBox);
-        discountPanel.add(Box.createVerticalStrut(10));
-        discountPanel.add(pointCheckBox);
 
-        JPanel pointPanel = new JPanel(new FlowLayout());
-        pointTextField = new JTextField(10);
-        pointTextField.setEnabled(false);
-        pointPanel.add(pointCheckBox);
-        JLabel pointLabel = new JLabel("사용할 포인트: ");
-        pointTextField = new JTextField(10);
-        pointTextField.setEnabled(false);
+        JPanel affiliatePanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        affiliateCheckBox = new JCheckBox("제휴 할인");
+        String[] affiliateOptions = {"우리은행", "국민은행", "토스은행", "카카오뱅크"};
+        affiliateComboBox = new JComboBox<>(affiliateOptions);
+        affiliateComboBox.setEnabled(false);
+        affiliatePanel.add(affiliateCheckBox);
+        affiliatePanel.add(affiliateComboBox);
+
+        JPanel telecomPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        telecomCheckBox = new JCheckBox("통신사 할인");
+        String[] telecomOptions = {"KT", "SKT", "LG U+"};
+        telecomComboBox = new JComboBox<>(telecomOptions);
+        telecomComboBox.setEnabled(false);
+        telecomPanel.add(telecomCheckBox);
+        telecomPanel.add(telecomComboBox);
+
+        JPanel pointPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        cashCheckBox = new JCheckBox("현금 할인");
+        cashTextField = new JTextField(10);
+        cashTextField.setEnabled(false);
+        pointPanel.add(cashCheckBox);
+        JLabel pointLabel = new JLabel("할인할 금액: ");
         pointPanel.add(pointLabel);
-        pointPanel.add(pointTextField);
+        pointPanel.add(cashTextField);
+
+        discountPanel.add(affiliatePanel);
+        discountPanel.add(telecomPanel);
+        discountPanel.add(pointPanel);
 
         JPanel bottomPanel = new JPanel(new FlowLayout());
-        JLabel discountpriceLabel = new JLabel("할인된 가격: ");
+        JLabel discountPriceLabel = new JLabel("할인된 가격: ");
         discountedPriceTextField = new JTextField(10);
-        bottomPanel.add(discountpriceLabel);
+        bottomPanel.add(discountPriceLabel);
         discountedPriceTextField.setEditable(false);
         bottomPanel.add(discountedPriceTextField);
 
-        JPanel sidePanel = new JPanel(new GridLayout(3, 1));
-        sidePanel.add(discountPanel);
-        sidePanel.add(pointPanel);
-
         mainPanel.add(topPanel, BorderLayout.NORTH);
-        mainPanel.add(sidePanel, BorderLayout.WEST);
+        mainPanel.add(discountPanel, BorderLayout.CENTER);
         mainPanel.add(bottomPanel, BorderLayout.SOUTH);
 
         add(mainPanel);
 
-        pointCheckBox.addActionListener(new ActionListener() {
+        affiliateCheckBox.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                pointTextField.setEnabled(pointCheckBox.isSelected());
+                affiliateComboBox.setEnabled(affiliateCheckBox.isSelected());
+            }
+        });
+
+        telecomCheckBox.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                telecomComboBox.setEnabled(telecomCheckBox.isSelected());
+            }
+        });
+
+        cashCheckBox.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                cashTextField.setEnabled(cashCheckBox.isSelected());
             }
         });
 
@@ -91,18 +114,39 @@ public class DiscountGUI extends JFrame {
                 double discountedPrice = price;
 
                 if (affiliateCheckBox.isSelected()) {
-                    Discount affiliateDiscount = new AffiliateDiscount(null);
-                    discountedPrice = affiliateDiscount.applyDiscount(discountedPrice);
+                    String affiliateOption = (String) affiliateComboBox.getSelectedItem();
+                    if (affiliateOption.equals("우리은행")) {
+                        Discount affiliateDiscount = new AffiliateDiscount(null);
+                        discountedPrice = affiliateDiscount.applyDiscount(discountedPrice);
+                    } else if (affiliateOption.equals("국민은행")) {
+                        Discount affiliateDiscount = new AffiliateDiscount(null);
+                        discountedPrice = affiliateDiscount.applyDiscount(discountedPrice);
+                    } else if (affiliateOption.equals("토스은행")) {
+                       Discount affiliateDiscount = new AffiliateDiscount(null);
+                        discountedPrice = affiliateDiscount.applyDiscount(discountedPrice);
+                    } else if (affiliateOption.equals("카카오뱅크")) {
+                        Discount affiliateDiscount = new AffiliateDiscount(null);
+                        discountedPrice = affiliateDiscount.applyDiscount(discountedPrice);
+                    }
                 }
 
                 if (telecomCheckBox.isSelected()) {
-                    Discount telecomDiscount = new TelecomDiscount(null);
-                    discountedPrice = telecomDiscount.applyDiscount(discountedPrice);
+                    String telecomOption = (String) telecomComboBox.getSelectedItem();
+                    if (telecomOption.equals("KT")) {
+                        Discount telecomDiscount = new TelecomDiscount(null);
+                        discountedPrice = telecomDiscount.applyDiscount(discountedPrice);
+                    } else if (telecomOption.equals("SKT")) {
+                         Discount telecomDiscount = new TelecomDiscount(null);
+                        discountedPrice = telecomDiscount.applyDiscount(discountedPrice);
+                    } else if (telecomOption.equals("LG U+")) {
+                         Discount telecomDiscount = new TelecomDiscount(null);
+                        discountedPrice = telecomDiscount.applyDiscount(discountedPrice);
+                    }
                 }
 
-                if (pointCheckBox.isSelected()) {
-                    double point = Double.parseDouble(pointTextField.getText());
-                    Discount pointDiscount = new PointDiscount(null, point);
+                if (cashCheckBox.isSelected()) {
+                    double point = Double.parseDouble(cashTextField.getText());
+                    Discount pointDiscount = new CashDiscount(null, point);
                     discountedPrice = pointDiscount.applyDiscount(discountedPrice);
                 }
 
