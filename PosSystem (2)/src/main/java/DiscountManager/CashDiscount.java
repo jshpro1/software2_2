@@ -8,7 +8,7 @@ package DiscountManager;
  *
  * @author jsh
  */
-//포인트 할인
+//현금 할인
 public class CashDiscount extends DiscountDecorator {
 
     private final double point;
