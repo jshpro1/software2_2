@@ -111,8 +111,12 @@ public class SalesReportsGUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String selectedOption = (String) comboBox.getSelectedItem();
-                int salesAmount = calculateSales(selectedOption);
-                resultTextField.setText(Integer.toString(salesAmount));
+                if (validateDateInput(selectedOption)) {
+                    int salesAmount = calculateSales(selectedOption);
+                    resultTextField.setText(Integer.toString(salesAmount));
+                } else {
+                    JOptionPane.showMessageDialog(SalesReportsGUI.this, "날짜를 올바르게 입력하세요.", "입력 오류", JOptionPane.WARNING_MESSAGE);
+                }
             }
         });
 
@@ -158,6 +162,29 @@ public class SalesReportsGUI extends JFrame {
         SwingUtilities.invokeLater(() -> new SalesReportsGUI(sales));
     }
 
+    private boolean validateDateInput(String selectedOption) {
+        switch (selectedOption) {
+            case "일일 매출액":
+                return isNumeric(monthTextField.getText()) && isNumeric(dayTextField.getText());
+            case "주간 매출액":
+                return isNumeric(monthTextField.getText()) && isNumeric(weekTextField.getText());
+            case "월간 매출액":
+                return isNumeric(monthTextField.getText());
+            default:
+                return true;
+        }
+    }
+
+    private boolean isNumeric(String input) {
+        try {
+            Integer.parseInt(input);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
+    }
+    
+    //파일읽기 json 형식으로 바꾸기
     private static List<Sale> readSalesFromFile(String filePath) {
         List<Sale> sales = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
