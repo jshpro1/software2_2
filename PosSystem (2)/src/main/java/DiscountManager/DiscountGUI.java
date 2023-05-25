@@ -16,12 +16,13 @@ import java.awt.event.ActionListener;
 public class DiscountGUI extends JFrame {
 
     private JTextField priceTextField;
-    private JTextField discountedPriceTextField;
+    private JTextField discountedPriceTextField; // 할인된 가격을 보여주는 텍스트 필드
+    private JTextField discountAmountTextField;
     private JButton applyButton;
     private JCheckBox affiliateCheckBox;
-    private JComboBox<String> affiliateComboBox; // 제휴 할인 콤보박스
+    private JComboBox<String> affiliateComboBox;
     private JCheckBox telecomCheckBox;
-    private JComboBox<String> telecomComboBox; // 통신사 할인 콤보박스
+    private JComboBox<String> telecomComboBox;
     private JCheckBox cashCheckBox;
     private JTextField cashTextField;
 
@@ -65,24 +66,32 @@ public class DiscountGUI extends JFrame {
         cashTextField = new JTextField(10);
         cashTextField.setEnabled(false);
         pointPanel.add(cashCheckBox);
-        JLabel pointLabel = new JLabel("할인할 금액: ");
+        JLabel pointLabel = new JLabel("할인금액을 입력하세요 : ");
         pointPanel.add(pointLabel);
         pointPanel.add(cashTextField);
+
+        JPanel discountPricePanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        JLabel discountPriceLabel = new JLabel("할인된 가격: ");
+        discountedPriceTextField = new JTextField(10);
+        discountPricePanel.add(discountPriceLabel);
+        discountedPriceTextField.setEditable(false);
+        discountPricePanel.add(discountedPriceTextField);
+
+        JPanel discountAmountPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        JLabel discountAmountLabel = new JLabel("할인 금액: ");
+        discountAmountTextField = new JTextField(10);
+        discountAmountTextField.setEditable(false);
+        discountAmountPanel.add(discountAmountLabel);
+        discountAmountPanel.add(discountAmountTextField);
 
         discountPanel.add(affiliatePanel);
         discountPanel.add(telecomPanel);
         discountPanel.add(pointPanel);
-
-        JPanel bottomPanel = new JPanel(new FlowLayout());
-        JLabel discountPriceLabel = new JLabel("할인된 가격: ");
-        discountedPriceTextField = new JTextField(10);
-        bottomPanel.add(discountPriceLabel);
-        discountedPriceTextField.setEditable(false);
-        bottomPanel.add(discountedPriceTextField);
+        discountPanel.add(discountPricePanel);
+        discountPanel.add(discountAmountPanel);
 
         mainPanel.add(topPanel, BorderLayout.NORTH);
         mainPanel.add(discountPanel, BorderLayout.CENTER);
-        mainPanel.add(bottomPanel, BorderLayout.SOUTH);
 
         add(mainPanel);
 
@@ -122,7 +131,7 @@ public class DiscountGUI extends JFrame {
                         Discount affiliateDiscount = new AffiliateDiscount(null);
                         discountedPrice = affiliateDiscount.applyDiscount(discountedPrice);
                     } else if (affiliateOption.equals("토스은행")) {
-                       Discount affiliateDiscount = new AffiliateDiscount(null);
+                        Discount affiliateDiscount = new AffiliateDiscount(null);
                         discountedPrice = affiliateDiscount.applyDiscount(discountedPrice);
                     } else if (affiliateOption.equals("카카오뱅크")) {
                         Discount affiliateDiscount = new AffiliateDiscount(null);
@@ -136,10 +145,10 @@ public class DiscountGUI extends JFrame {
                         Discount telecomDiscount = new TelecomDiscount(null);
                         discountedPrice = telecomDiscount.applyDiscount(discountedPrice);
                     } else if (telecomOption.equals("SKT")) {
-                         Discount telecomDiscount = new TelecomDiscount(null);
+                        Discount telecomDiscount = new TelecomDiscount(null);
                         discountedPrice = telecomDiscount.applyDiscount(discountedPrice);
                     } else if (telecomOption.equals("LG U+")) {
-                         Discount telecomDiscount = new TelecomDiscount(null);
+                        Discount telecomDiscount = new TelecomDiscount(null);
                         discountedPrice = telecomDiscount.applyDiscount(discountedPrice);
                     }
                 }
@@ -151,6 +160,9 @@ public class DiscountGUI extends JFrame {
                 }
 
                 discountedPriceTextField.setText(String.valueOf(discountedPrice));
+
+                double discountAmount = price - discountedPrice;
+                discountAmountTextField.setText(String.valueOf(discountAmount));
             }
         });
     }
