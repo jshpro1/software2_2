@@ -4,34 +4,61 @@
  */
 package Management.PayManagement.payment;
 
-import File.*;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Vector;
-
+import UI.OrderManagement_UI.Order_UI;
+import java.util.*;
 /**
  *
  * @author USER
  */
 public class Payment {
-    public String name;
-    public String date;
-    public int price;
-    public int salesamount;
-    public double totalsalesamount;
-    public ArrayList<Vector> vector;
+    public String method;
+    public Date date;
+    public ArrayList<Vector> list;
+    public double tax;
+    public double surtax;
+    public double sum;
+    public int discount;
+    public double total;
+    
+    public SaveReceipt save;
     
     public Payment() {
-        name = "name";
-        price = 0;
-        salesamount = 0;
-        totalsalesamount = 0;
-        date = "";
+        method = "";
+        date = new Date();
+        list = new ArrayList<Vector>();
+        tax = 0;
+        surtax = 0;
+        sum = 0;
+        discount = 0;
+        total = 0;
     }
-    public static void main(String[] args) {
-        SavePayment save = new SavePayment();
+    
+    public void CardPay(){
+        SaveReceipt save = new SaveReceipt();
+        save.saveReceiptData("카드 결제");
+    }
+    
+    public void CashPay(){
         
-        save.insertPaymentData("name");
     }
+    
+    public void MobilePay(){
+        
+    }
+    
+    public static void main(String[] args) {
+        /*
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Order_UI().setVisible(true);
+            }
+        });
+*/
+        PaymentManager start = new PaymentManager();
+        start.GUIstart("card");
+        
+        SaveSales save2 = new SaveSales();
+        save2.saveSalesData();
+    }
+    
 }

@@ -1,29 +1,28 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package File;
 
-import Management.PayManagement.payment.*;
+import Management.MenuManagement.Menu.*;
 import com.google.gson.Gson;
 import java.io.File;
 import java.io.FileWriter;
 import java.util.ArrayList;
 
-
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
 /**
+ * 0523 ( ! ) 수정 필요
  *
- * @author USER
+ * @author 남진우
  */
-public class Save_PaymentData {
-    
-    public Save_PaymentData(ArrayList<Payment> mlist) {
+public class Save_MenuData {
+
+    public Save_MenuData(ArrayList<Menu> mlist) {
         try {
 
             File file = null;
             Gson gs = new Gson();
-            file = new File("Payment_Data.json");
+            file = new File("Menu_Data.json");
 
             FileWriter writer = new FileWriter(file);
             String fileWriter = gs.toJson(mlist);
@@ -37,4 +36,5 @@ public class Save_PaymentData {
         }
 
     }
+
 }
