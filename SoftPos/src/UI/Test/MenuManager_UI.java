@@ -136,7 +136,7 @@ public class MenuManager_UI extends javax.swing.JFrame {
 
     private void add_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add_btnActionPerformed
         // TODO add your handling code here:
-        new Make();
+        new Make().setVisible(true);
     }//GEN-LAST:event_add_btnActionPerformed
 
     /**

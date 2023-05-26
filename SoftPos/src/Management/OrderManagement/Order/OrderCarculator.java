@@ -4,15 +4,81 @@
  */
 package Management.OrderManagement.Order;
 
+import com.google.gson.Gson;
+import java.util.Vector;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author 남진우
  */
 public class OrderCarculator {
-    public int total_amount; // 총 금액
-    public int discount_amonut; // 할인 금액
-    public int receive_amount; // 받을 돈
-    public int received; // 받은돈
+
+    private int total_amount;
+    private int disc_amount;
+    public Object[][] ob ={ 
+            {"총 금 액",0},
+            {"할인금액",0},
+            {"받을금액",0},
+            {"받은금액",0},
+            {"거스름돈",0}
+        };
+    public Vector av ;
+    public Vector<Vector> orderlist;
+
+    public OrderCarculator(Vector<Vector> orderlist) {
+        
+        this.orderlist = orderlist;
+    }
+    
+    public void setAmounts(DefaultTableModel atm,int ra){// ra는 받을돈
+        
+        atm.setRowCount(0);
+        setTotalAmount(); // 총금액 계산
+        setdiscAmount(); // 할인금액 계산
+        setToBeReceiveAmount(); // 받을 돈 계산
+        setReceiveAmount(ra); // 받은돈
+        setChange(ra); // 거스름돈 계산
+        setAmountVector(); 
+        
+        
+        for(int i = 0 ; i < av.size(); i++){
+            atm.addRow((Object[])av.get(i));
+        }
+        atm.fireTableDataChanged();
+    }
+   
+    
+    
+    public void setTotalAmount(){
+        total_amount = 0;
+        for(Vector vec : orderlist){
+            total_amount += (int)vec.get(5);
+        }
+        ob[0][1] = total_amount;
+    }
+    public void setdiscAmount(){
+        disc_amount = 0;
+    }
+    
+    public void setToBeReceiveAmount(){
+        ob[2][1] = total_amount - disc_amount;
+    }
+    public void setReceiveAmount(int ra){
+        ob[3][1] =  ra; // 받은 돈
+    }
+    public void setChange(int ra){
+        ob[4][1] = ra - (total_amount - disc_amount);
+    }
+    
+    public void setAmountVector(){
+        av = new Vector();
+        av.add(ob[0]);
+        av.add(ob[1]);
+        av.add(ob[2]);
+        av.add(ob[3]);
+        av.add(ob[4]);
+    }
             
     
 }
