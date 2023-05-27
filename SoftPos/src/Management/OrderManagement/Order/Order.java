@@ -6,6 +6,7 @@ package Management.OrderManagement.Order;
 
 import File.*;
 import Management.MenuManagement.Menu.*;
+import Management.StockManagement.Stock.Stock;
 import com.google.gson.Gson;
 import java.util.*;
 import javax.swing.JButton;
@@ -25,6 +26,7 @@ public class Order {
     public ArrayList<JButton> btnlist;
     public OrderCarculator ocal;
 
+    //메뉴만드는데 사용된 재고 재료 리스트
     public Object[][] ob = {
         {"총 금 액", 0},
         {"할인금액", 0},
@@ -70,16 +72,27 @@ public class Order {
         }
     }
 
+    public void takeOrder(DefaultTableModel tm){
+        tm.setRowCount(0);
+        for (Vector vec : orderlist){
+            tm.addRow(vec);
+        }
+        tm.fireTableDataChanged();
+    }
     public void addOrder(String mname, DefaultTableModel tm) {
 
         setOrderinfo();
 
-        boolean dup = false;
         tm.setRowCount(0);
 
+        /*
+        주문리스트에 메뉴가 
+        중복하는지 확인하는 코드
+         */
+        boolean dup = false; // 주문 리스트에 메뉴 중복 확인
         for (Vector vec : orderlist) {
             if (vec.get(1).equals(mname)) {
-                dup = true;
+                dup = true; //중복확인
                 vec.set(3, (int) vec.get(3) + 1);
                 vec.set(4, (int) vec.get(3) * (int) vec.get(2));
 //                vec.set(5, (int) vec.get(3) * (int) vec.get(2)); //0527
@@ -89,6 +102,15 @@ public class Order {
         if (!dup) {
             for (Menu m : mlist) {
                 if (m.name.equals(mname)) {
+
+                    // 재고 부족한지 확인해보는 코드
+                    if (checkHaveStocks(m)) {
+                        return;
+                    }
+                    /*
+                    주문 리스트에 새로운 메뉴 
+                    추가하는 코드
+                    */
                     orderlist.add(orderinfo);
                     orderinfo.set(0, orderlist.indexOf(orderinfo) + 1);
                     orderinfo.set(1, m.name);
@@ -113,11 +135,45 @@ public class Order {
 
     public void setOrderinfo() {
         orderinfo = new Vector();
-        orderinfo.add(0);
-        orderinfo.add("");
-        orderinfo.add(0);
-        orderinfo.add(0);
-        orderinfo.add(0);
+        orderinfo.add(0); //주문 번호
+        orderinfo.add(""); //메뉴 명
+        orderinfo.add(0); // 단가
+        orderinfo.add(0); // 수량
+        orderinfo.add(0); // 금액
 //        orderinfo.add(0);
     }
+
+    public Vector<Vector> getOrderList() {
+        return orderlist;
+    }
+
+    /*
+    재고 부족한지 
+    확인해보는 코드
+     */
+    public Boolean checkHaveStocks(Menu m) {
+        String emptystocks = "";
+        boolean empty = false;
+        for (Vector vec : m.ingredient) {
+            ArrayList<Stock> list = new Bring_StockData(String.valueOf(vec.get(1))).slist;
+            for (Stock stk : list) {
+                if (stk.getName().equals((String) vec.get(0))) {
+                    if (stk.getPcs() == 0) {
+                        empty = true;
+                        if (emptystocks.equals("")) {
+                            emptystocks = stk.getName();
+                        } else {
+                            emptystocks = emptystocks + ", " + stk.getName();
+                        }
+                    }
+                }
+            }
+        }
+        if (empty) {
+            JOptionPane.showMessageDialog(null, m.name + "의 재료인 " + emptystocks + " (이)가 부족합니다.");
+            return true;
+        }
+        return false;
+    }
+
 }

@@ -5,7 +5,7 @@
 package Management.StockManagement;
 
 import File.*;
-import Management.OrderManagement.Order.OrderProcess;
+import Management.PayManagement.payment.PaymentProcess;
 import Management.StockManagement.Stock.*;
 import Management.StockManagement.manager.*;
 import java.util.ArrayList;
@@ -18,13 +18,13 @@ public class Test_Stock {
 
     public static void main(String[] args) {
 
-        OrderProcess op = new OrderProcess();
-        StaplesManager sm = new StaplesManager(op);
-        new MakeStockData(sm);
-        
-//        new MakeStockData(new MeatsManager(op));
-//        new MakeStockData(new SauceManager(op));
-//        new MakeStockData(new VeggiesManager(op));
+//        OrderProcess op = new OrderProcess();
+//        StaplesManager sm = new StaplesManager(op);
+//        new MakeStockData(sm);
+//        
+////        new MakeStockData(new MeatsManager(op));
+////        new MakeStockData(new SauceManager(op));
+////        new MakeStockData(new VeggiesManager(op));
 
     }
 }

@@ -4,10 +4,12 @@
  */
 package File;
 
+import Management.StockManagement.Stock.Stock;
 import Management.StockManagement.manager.*;
 import com.google.gson.Gson;
 import java.io.File;
 import java.io.FileWriter;
+import java.util.ArrayList;
 
 /**
  *
@@ -15,7 +17,7 @@ import java.io.FileWriter;
  */
 public class Save_StockDataDefalt {
 
-    public Save_StockDataDefalt(StockList slist,String type) {
+    public Save_StockDataDefalt(ArrayList<Stock> slist,String type) {
         try {
             File file = null;
             Gson gs = new Gson();
@@ -33,7 +35,7 @@ public class Save_StockDataDefalt {
             }
             FileWriter writer = new FileWriter(file);
 
-            String fileWriter = gs.toJson(slist.stocks);
+            String fileWriter = gs.toJson(slist);
             System.out.println(fileWriter);
 
             writer.write(fileWriter);

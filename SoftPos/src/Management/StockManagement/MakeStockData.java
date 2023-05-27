@@ -37,16 +37,16 @@ public class MakeStockData { // 제일처음 재고 파일 생성용 별로 안중요
                     
             switch (sm.identify()) {
                 case "Staple":
-                    sm.getStocksList().stocks.add(new Staple(name,kcal,unit_price));
+                    sm.getStocksList().add(new Staple(name,kcal,unit_price));
                     break;
                 case "Meat":
-                    sm.getStocksList().stocks.add(new Meat(name, kcal, unit_price));
+                    sm.getStocksList().add(new Meat(name, kcal, unit_price));
                     break;
                 case "Veggie":
-                    sm.getStocksList().stocks.add(new Veggie(name, kcal, unit_price));
+                    sm.getStocksList().add(new Veggie(name, kcal, unit_price));
                     break;
                 case "Sauce":
-                    sm.getStocksList().stocks.add(new Sauce(name, kcal, unit_price));
+                    sm.getStocksList().add(new Sauce(name, kcal, unit_price));
                     break;
             }
             

@@ -22,7 +22,8 @@ import java.util.ArrayList;
  */
 public class Bring_StockData {
     
-    public StockList slist;
+//    public StockList slist;
+    public ArrayList<Stock> slist;
 
     public Bring_StockData(String type) {
        
@@ -72,8 +73,10 @@ public class Bring_StockData {
             }
             
             sbuild.append(result);
-            slist = new StockList();
-            slist.stocks = new Gson().fromJson(result, stockListType);
+//            slist = new StockList();
+//            slist.stocks = new Gson().fromJson(result, stockListType);
+            slist = new ArrayList<Stock>();
+            slist = new Gson().fromJson(result, stockListType);
            /*
             0521 오류 수정
             */
@@ -86,19 +89,19 @@ public class Bring_StockData {
         
     }
     public ArrayList<Stock> bringStocksList(){
-        return slist.stocks;
+        return slist;
     }
-    public ArrayList<Staple> bringStapleList(){
-        return slist.stocks;
-    }
-    public ArrayList<Meat> bringMeatList(){
-        return slist.stocks;
-    }
-    public ArrayList<Sauce> bringSauceList(){
-        return slist.stocks;
-    }
-    public ArrayList<Veggie> bringVeggieList(){
-        return slist.stocks;
-    }
+//    public ArrayList<Staple> bringStapleList(){
+//        return ;
+//    }
+//    public ArrayList<Meat> bringMeatList(){
+//        return slist;
+//    }
+//    public ArrayList<Sauce> bringSauceList(){
+//        return slist;
+//    }
+//    public ArrayList<Veggie> bringVeggieList(){
+//        return slist;
+//    }
     
 }

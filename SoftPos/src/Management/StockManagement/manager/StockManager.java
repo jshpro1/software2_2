@@ -5,18 +5,29 @@
 package Management.StockManagement.manager;
 
 import Management.MenuManagement.Menu.*;
+import Management.PayManagement.payment.PaymentProcess;
+import Management.StockManagement.Stock.Stock;
+import Management.StockManagement.StockManagement;
 import java.util.ArrayList;
 
 /**
  *
  * @author 남진우
  */
-public interface StockManager {
-    
-    public void update(Menu menu);
+public interface StockManager { //옵저버 인터페이스
+
+    public void updateMenuData(Menu menu);
+    public void updateStockData(ArrayList<Stock> slist);
+
+    public void subscribePaymentProcess(PaymentProcess op);
+
+    public void subscribeStockMangement(StockManagement smg);
+
     public Menu getMenu();
+
     public String identify();
-    public StockList getStocksList();
-    
-    
+
+    public ArrayList<Stock> getStocksList();
+    public void setStocksList(ArrayList<Stock> slist);
+
 }

@@ -4,9 +4,13 @@
  */
 package Management.StockManagement.manager;
 
+import Management.PayManagement.payment.PaymentProcess;
 import File.*;
 import Management.MenuManagement.Menu.*;
-import Management.OrderManagement.Order.OrderProcess;
+import Management.OrderManagement.Order.*;
+import Management.StockManagement.Stock.Stock;
+import Management.StockManagement.StockManagement;
+import java.util.ArrayList;
 
 /**
  *
@@ -14,25 +18,32 @@ import Management.OrderManagement.Order.OrderProcess;
  */
 public class StaplesManager implements StockManager {
 
-    private OrderProcess op;
     public Menu menu;
 //    public StocksList slist; // 저장할 재고 리스트 0522 잠시 잠금
-    public StockList slist;
+    public ArrayList<Stock> slist;
 
-    public StaplesManager(OrderProcess op) {
-        this.op = op;
-        op.addStockManager(this);  // 재고 관리자 명단 구독
+    public StaplesManager( ) {
 
 //        slist = new StocksList(this); 0522 잠시잠금
-        slist = new StockList();
+        slist = new ArrayList<Stock>();
 
         bringData();
 
     }
+    @Override
+    public void subscribePaymentProcess(PaymentProcess op) {
+
+        op.addStockManager(this);
+    }
+    @Override
+    public void subscribeStockMangement(StockManagement smg) {
+
+        smg.addStockManager(this);
+    }
 
     // 저장소에서 불러오기
     private void bringData() {
-        new Bring_StockData(this.identify());
+        slist = new Bring_StockData(this.identify()).slist;
     }
 
     @Override
@@ -44,15 +55,31 @@ public class StaplesManager implements StockManager {
     public Menu getMenu() {
         return menu;
     }
-
+    
+    
+    //업데이트들
     @Override
-    public void update(Menu menu) { //임시 
+    public void updateMenuData(Menu menu) { 
         this.menu = menu;
+    }
+    @Override
+    public void updateStockData(ArrayList<Stock> slist) { 
+        this.slist = slist;
+        saveData(slist);
+    }
+    
+    
+    private void saveData(ArrayList<Stock> slist){
+        new Save_StockDataDefalt(slist,this.identify());
     }
 
     @Override
-    public StockList getStocksList() {
+    public ArrayList<Stock> getStocksList() {
         return slist;
+    }
+    @Override
+    public void setStocksList(ArrayList<Stock> slist) {
+        this.slist = slist;
     }
 //    public void count(){ // 임시 재고 확인
 //        for(Stock material : menu.material){
