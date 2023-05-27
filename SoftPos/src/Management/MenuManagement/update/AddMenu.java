@@ -19,14 +19,14 @@ import javax.swing.table.*;
 public class AddMenu {
 
     public Menu enter_menu;
-    public Menu menu;
+//    public Menu menu;
     public ArrayList<Menu> mlist;
     public ArrayList<Stock> stocks;
     private Vector vlist;
     public Vector<String> v;
     public Vector ingred;
-    private Bring_StockData bsd;
-    private Bring_MenuData bmd;
+//    private Bring_StockData bsd;
+//    private Bring_MenuData bmd;
 
     public ArrayList<Vector> ingredients;
 
@@ -64,7 +64,6 @@ public class AddMenu {
         for (Vector vec : ingredients) {
             v.add((String) vec.get(0));
         }
-        
 
 //        switch (stocks.get(index).kind()) {
 //            case "Staple":
@@ -99,26 +98,25 @@ public class AddMenu {
 
     public void insertMenuData(String name) {
 
-        
         enter_menu.ingredient = ingredients;
         enter_menu.name = name;
-        mlist.add(0,enter_menu);
-        
+        mlist.add(0, enter_menu);
+
         setPrice();
         setKcal();
-        
+
         JOptionPane.showMessageDialog(null, mlist.get(0).name + "의 등록을 완료하였습니다");
         new Save_MenuData(mlist);
-        
+
         ClearField();
-        mlist =new Bring_MenuData().mlist;
-        
+        mlist = new Bring_MenuData().mlist;
+
     }
 
     public void setPrice() {
         enter_menu.price = 0;
         for (Vector vec : ingredients) {
-            enter_menu.price += (int) vec.get(3)*2;
+            enter_menu.price += (int) vec.get(3) * 2;
         }
     }
 

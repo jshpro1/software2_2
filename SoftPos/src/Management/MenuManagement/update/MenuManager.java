@@ -18,14 +18,14 @@ import javax.swing.table.DefaultTableModel;
 public class MenuManager {
 
     private Vector vlist;
-    private ArrayList<Menu> mlist;
-    private DefaultTableModel tm;
+    public ArrayList<Menu> mlist;
+//    private DefaultTableModel tm;
     public MenuManager() {
 
     }
 
     public void setTable(String type, DefaultTableModel tm) {
-        this.tm =tm;
+//        this.tm =tm;
         tm.setRowCount(0);
         mlist = new Bring_MenuData().mlist;
 

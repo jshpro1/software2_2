@@ -3,45 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/StockManagement/MakeStockData.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/Test/Json/StockToJson.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/MenuManagement/Menu/Meat_Menu.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/StockManagement/manager/VeggiesManager.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/OrderManagement/Order/OrderProcess.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/StockManagement/Stock/Staple.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/StockManagement/Stock/Veggie.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/File/Save_StockDataDefalt.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/OrderManagement/Order/Subject.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/StockManagement/Stock/Meat.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/UI/StockManagement_UI/stock_ui.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/MenuManagement/Menu/Various_Menu.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/MenuManagement/Menu/imshi.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/StockManagement/manager/MeatsManager.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/MenuManagement/Menu/RiceAndNoodle.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/UI/StockManagement_UI/NewJPanel.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/File/Bring_StockData.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/OrderManagement/Order/TakeMenu.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/OrderManagement/Order/Order.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/StockManagement/manager/SauceManager.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/OrderManagement/Order/Order_Menu.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/StockManagement/PlaceAnOrder.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/File/Save_StockData.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/StockManagement/manager/StaplesManager.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/main/SoftPos.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/StockManagement/manager/StockList.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/OrderManagement/Order/OrderCarculator.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/MenuManagement/Menu/SideDish.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/MenuManagement/Menu/Food.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/StockManagement/manager/StockManager.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/StockManagement/Stock/Stock.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/MenuManagement/Menu/Salad.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/StockManagement/StockManagement.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/UI/StockManagement_UI/NewJFrame.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/StockManagement/Stock/Sauce.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/StockManagement/StockIsEmpty.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/MenuManagement/Menu/PorkFriedRice.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/StockManagement/manager/StocksList.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/StockManagement/Test_Stock.java</file>
+            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/MenuManagement/update/AddMenu.java</file>
+            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/UI/MenuManagement_UI/UpdateMenu_UI.java</file>
+            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/UI/PayManagement_UI/Discount_UI.java</file>
+            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/MenuManagement/update/UpdateMenu.java</file>
+            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/UI/OrderManagement_UI/Order_UI.java</file>
+            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/UI/MenuManagement_UI/AddMenu_UI.java</file>
+            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/UI/MenuManagement_UI/MenuManager_UI.java</file>
+            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/UI/PayManagement_UI/Payment_UI.java</file>
+            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/MenuManagement/update/MenuManager.java</file>
         </group>
     </open-files>
 </project-private>
