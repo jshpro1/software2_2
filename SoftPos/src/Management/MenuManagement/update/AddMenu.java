@@ -41,13 +41,24 @@ public class AddMenu {
 
     public void setTable(String type, DefaultTableModel tm) {
         tm.setRowCount(0);
-        stocks = new Bring_StockData(type).bringStocksList();
-        for (int i = 0; i < stocks.size(); i++) {
+        //        stocks = new Bring_StockData(type).slist;
+//        for (int i = 0; i < stocks.size(); i++) {
+//            vlist = new Vector();
+//            vlist.add(stocks.get(i).getName());
+//            vlist.add(stocks.get(i).getKcal());
+//            vlist.add(stocks.get(i).getPrice());
+//            tm.addRow(vlist);
+//        }
+        /*
+        0528 이터레이터 삽입
+         */
+        Iterator slist_it = new Bring_StockData(type).cerateIterator();
+        while (slist_it.hasNext()) {
+            Stock stk = (Stock) slist_it.next();
             vlist = new Vector();
-            vlist.add(stocks.get(i).getName());
-            vlist.add(stocks.get(i).getKcal());
-            vlist.add(stocks.get(i).getPrice());
-            tm.addRow(vlist);
+            vlist.add(stk.getName());
+            vlist.add((int) stk.getKcal());
+            vlist.add(stk.getPrice());
         }
         tm.fireTableDataChanged();
     }

@@ -153,8 +153,8 @@ public class CashPayment_UI extends javax.swing.JFrame {
         /*
         재고처리하는 부분
          */
-//        i_proc.applyUsedStock();
-//        i_proc.notifyStockManager();
+        i_proc.applyUsedStock();
+        i_proc.notifyStockManager();
 
         /*
         영수증 저장하는 부분

@@ -120,7 +120,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="&#xb9d1;&#xc740; &#xace0;&#xb515;" size="18" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="&#xce74;&#xb4dc; &#xacb0;&#xc81c;"/>
+        <Property name="text" type="java.lang.String" value="&#xc0bc;&#xc131; &#xd398;&#xc774;"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">

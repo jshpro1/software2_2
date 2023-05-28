@@ -38,14 +38,28 @@ public class UpdateMenu { // 수정
 
     public void setTable(String type, DefaultTableModel tm) {
         tm.setRowCount(0);
-        stocks = new Bring_StockData(type).bringStocksList();
-        for (int i = 0; i < stocks.size(); i++) {
+//        stocks = new Bring_StockData(type).slist;
+//        for (int i = 0; i < stocks.size(); i++) {
+//            vlist = new Vector();
+//            vlist.add(stocks.get(i).getName());
+//            vlist.add(stocks.get(i).getKcal());
+//            vlist.add(stocks.get(i).getPrice());
+//            tm.addRow(vlist);
+//        }
+
+/*
+이터레이터 삽입
+*/
+
+        Iterator slist_it = new Bring_StockData(type).cerateIterator();
+        while (slist_it.hasNext()) {
+            Stock stk = (Stock) slist_it.next();
             vlist = new Vector();
-            vlist.add(stocks.get(i).getName());
-            vlist.add(stocks.get(i).getKcal());
-            vlist.add(stocks.get(i).getPrice());
-            tm.addRow(vlist);
+            vlist.add(stk.getName());
+            vlist.add((int) stk.getKcal());
+            vlist.add(stk.getPrice());
         }
+
         tm.fireTableDataChanged();
     }
 
@@ -84,7 +98,7 @@ public class UpdateMenu { // 수정
         setPrice();
         setKcal();
 
-        JOptionPane.showMessageDialog(null, beforename+"에서"+ updatemenu.name + "으로 수정을 완료하였습니다");
+        JOptionPane.showMessageDialog(null, beforename + "에서" + updatemenu.name + "으로 수정을 완료하였습니다");
         new Save_MenuData(mlist);
 
         ClearField();
@@ -108,12 +122,11 @@ public class UpdateMenu { // 수정
 
     public void getUpdateMenu(String umn) {
 
-        
         for (Menu menu : mlist) {
             if (menu.name.equals(umn)) {
                 updatemenu = menu;
             }
         }
-        
+
     }
 }

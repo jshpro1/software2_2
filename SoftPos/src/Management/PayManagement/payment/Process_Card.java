@@ -4,21 +4,28 @@
  */
 package Management.PayManagement.payment;
 
+import File.Bring_ReceiptData;
+import File.Save_ReceiptData;
 import Management.PayManagement.receipt.*;
 import java.util.*;
+
 /**
  *
  * @author 남진우
  */
 public class Process_Card { //리시버
-    
+
     private Receipt receipt;
 
     public Process_Card(Receipt receipt) {
         this.receipt = receipt;
     }
-    
-    public void makeCardReceipt(){
-        
+
+    public void makeCardReceipt() {
+        ArrayList<Receipt> rlist;
+        rlist = new Bring_ReceiptData().rlist;
+        rlist.add(receipt);
+        new Save_ReceiptData(rlist);
+        System.out.println(receipt);
     }
 }

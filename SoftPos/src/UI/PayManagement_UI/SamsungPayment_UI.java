@@ -15,19 +15,19 @@ import java.util.Vector;
  *
  * @author 남진우
  */
-public class CardPayment_UI extends javax.swing.JFrame {
+public class SamsungPayment_UI extends javax.swing.JFrame {
 
     private Vector<Vector> orderlist; // 주문 리스트
     private Object[][] ob;
     private IngredientsProcess i_proc;
     private PaymentManager p_manager;
-    private Process_Card c_proc;
-    private Payment_Card c_pay;
+    private Process_Samsung c_proc;
+    private Payment_Samsung c_pay;
 
     /**
      * Creates new form CashPayment_UI
      */
-    public CardPayment_UI(Vector<Vector> orderlist, Object[][] ob) {
+    public SamsungPayment_UI(Vector<Vector> orderlist, Object[][] ob) {
         // 초기화
         i_proc = new IngredientsProcess();
         this.orderlist = orderlist;
@@ -68,7 +68,7 @@ public class CardPayment_UI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("맑은 고딕", 1, 18)); // NOI18N
-        jLabel1.setText("카드 결제");
+        jLabel1.setText("삼성 페이");
 
         jLabel2.setText("결제 대상 금액");
 
@@ -189,9 +189,9 @@ public class CardPayment_UI extends javax.swing.JFrame {
         /*
         영수증 저장하는 부분
          */
-        Receipt receipt = new ReceiptMaker("카드", orderlist, ob, jTextField2.getText(), (String)jComboBox1.getSelectedItem()).MakeReceipt();
-        c_proc = new Process_Card(receipt);
-        c_pay = new Payment_Card(c_proc);
+        Receipt receipt = new ReceiptMaker("삼성페이", orderlist, ob, jTextField2.getText(), (String)jComboBox1.getSelectedItem()).MakeReceipt();
+        c_proc = new Process_Samsung(receipt);
+        c_pay = new Payment_Samsung(c_proc);
 
         p_manager.setCommend(c_pay);
         p_manager.takePayment();
@@ -222,14 +222,22 @@ public class CardPayment_UI extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CardPayment_UI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SamsungPayment_UI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CardPayment_UI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SamsungPayment_UI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CardPayment_UI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SamsungPayment_UI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CardPayment_UI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SamsungPayment_UI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>

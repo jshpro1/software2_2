@@ -682,9 +682,11 @@ public class Order_UI extends javax.swing.JFrame {
 
     private void CardPayment_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CardPayment_btnActionPerformed
         // TODO add your handling code here:
-        CardPayment_UI cpu = new CardPayment_UI(order.ocal.ob, p_btnlist);
-        cpu.setAmounts(order, amountsmodel, Integer.parseInt(amount_field.getText()));
-        cpu.setVisible(true);
+
+        if ((int) order.ob[4][1] >= 0)
+            new CardPayment_UI(order.getOrderList(), order.ob).setVisible(true);
+        else
+            JOptionPane.showMessageDialog(null, "받은금액을 입력해주시기 바랍니다.");
     }//GEN-LAST:event_CardPayment_btnActionPerformed
 
     private void Category4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Category4ActionPerformed
@@ -713,7 +715,10 @@ public class Order_UI extends javax.swing.JFrame {
     }//GEN-LAST:event_Category1ActionPerformed
 
     private void MobilePayment_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MobilePayment_btnActionPerformed
-        // TODO add your handling code here:
+        if ((int) order.ob[4][1] >= 0)
+            new SamsungPayment_UI(order.getOrderList(), order.ob).setVisible(true);
+        else
+            JOptionPane.showMessageDialog(null, "받은금액을 입력해주시기 바랍니다.");        // TODO add your handling code here:
     }//GEN-LAST:event_MobilePayment_btnActionPerformed
 
     private void Discount_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Discount_btnActionPerformed
@@ -891,8 +896,10 @@ public class Order_UI extends javax.swing.JFrame {
 
     private void CashPayment_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CashPayment_btnActionPerformed
         // TODO add your handling code here:
-        if((int)order.ob[4][1]>=0) new CashPayment_UI(order.getOrderList(),order.ob).setVisible(true);
-        else JOptionPane.showMessageDialog(null,  "받은금액을 입력해주시기 바랍니다.");
+        if ((int) order.ob[4][1] >= 0)
+            new CashPayment_UI(order.getOrderList(), order.ob).setVisible(true);
+        else
+            JOptionPane.showMessageDialog(null, "받은금액을 입력해주시기 바랍니다.");
     }//GEN-LAST:event_CashPayment_btnActionPerformed
 
     private void ApplyOrder_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ApplyOrder_btnActionPerformed

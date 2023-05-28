@@ -4,6 +4,8 @@
  */
 package Management.PayManagement.payment;
 
+import File.Bring_ReceiptData;
+import File.Save_ReceiptData;
 import Management.PayManagement.receipt.*;
 import java.util.ArrayList;
 import java.util.Vector;
@@ -19,10 +21,13 @@ public class Process_Samsung { //¸®½Ã¹ö
     public Process_Samsung(Receipt receipt) {
         this.receipt = receipt;
     }
-    
-    public void SamsungReceiptProcessing(){
-        
+
+    public void SamsungReceiptProcessing() {
+        ArrayList<Receipt> rlist;
+        rlist = new Bring_ReceiptData().rlist;
+        rlist.add(receipt);
+        new Save_ReceiptData(rlist);
+        System.out.println(receipt);
     }
-    
-    
+
 }
