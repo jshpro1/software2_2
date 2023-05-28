@@ -21,6 +21,10 @@ public class SauceManager implements StockManager {
     private Menu menu;
     public ArrayList<Stock> slist;
 
+    // Subject 하위 클래스들
+    private PaymentProcess op;
+    private StockManagement smg;
+
     public SauceManager() {
         slist = new ArrayList<Stock>();
         bringData();
@@ -53,29 +57,28 @@ public class SauceManager implements StockManager {
     public Menu getMenu() {
         return menu;
     }
-    
-    
-    
+
     //업데이트들
     @Override
     public void updateMenuData(Menu menu) { //임시 
         this.menu = menu;
     }
+
     @Override
     public void updateStockData(ArrayList<Stock> slist) { //임시 
         this.slist = slist;
         saveData(slist);
     }
 
-    
-    private void saveData(ArrayList<Stock> slist){
-        new Save_StockDataDefalt(slist,this.identify());
+    private void saveData(ArrayList<Stock> slist) {
+        new Save_StockDataDefalt(slist, this.identify());
     }
-    
+
     @Override
     public ArrayList<Stock> getStocksList() {
         return slist;
     }
+
     @Override
     public void setStocksList(ArrayList<Stock> slist) {
         this.slist = slist;

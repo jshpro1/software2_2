@@ -18,11 +18,15 @@ import java.util.ArrayList;
  */
 public class StaplesManager implements StockManager {
 
+    // Subject 하위 클래스들
+    private PaymentProcess op;
+    private StockManagement smg;
+
     public Menu menu;
 //    public StocksList slist; // 저장할 재고 리스트 0522 잠시 잠금
     public ArrayList<Stock> slist;
 
-    public StaplesManager( ) {
+    public StaplesManager() {
 
 //        slist = new StocksList(this); 0522 잠시잠금
         slist = new ArrayList<Stock>();
@@ -30,11 +34,13 @@ public class StaplesManager implements StockManager {
         bringData();
 
     }
+
     @Override
     public void subscribePaymentProcess(PaymentProcess op) {
 
         op.addStockManager(this);
     }
+
     @Override
     public void subscribeStockMangement(StockManagement smg) {
 
@@ -55,28 +61,28 @@ public class StaplesManager implements StockManager {
     public Menu getMenu() {
         return menu;
     }
-    
-    
+
     //업데이트들
     @Override
-    public void updateMenuData(Menu menu) { 
+    public void updateMenuData(Menu menu) {
         this.menu = menu;
     }
+
     @Override
-    public void updateStockData(ArrayList<Stock> slist) { 
+    public void updateStockData(ArrayList<Stock> slist) {
         this.slist = slist;
         saveData(slist);
     }
-    
-    
-    private void saveData(ArrayList<Stock> slist){
-        new Save_StockDataDefalt(slist,this.identify());
+
+    private void saveData(ArrayList<Stock> slist) {
+        new Save_StockDataDefalt(slist, this.identify());
     }
 
     @Override
     public ArrayList<Stock> getStocksList() {
         return slist;
     }
+
     @Override
     public void setStocksList(ArrayList<Stock> slist) {
         this.slist = slist;

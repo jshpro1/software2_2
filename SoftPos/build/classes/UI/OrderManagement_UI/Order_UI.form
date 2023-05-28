@@ -313,10 +313,7 @@
                           </Group>
                           <Component id="jSeparator1" alignment="1" max="32767" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="ApplyOrder_btn" min="-2" pref="72" max="-2" attributes="0"/>
-                                  <Component id="Exit_btn" min="-2" pref="72" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="ApplyOrder_btn" min="-2" pref="72" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="CashPayment_btn" min="-2" pref="72" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
@@ -377,11 +374,7 @@
                           <Component id="MobilePayment_btn" alignment="0" max="32767" attributes="0"/>
                           <Component id="CardPayment_btn" alignment="0" max="32767" attributes="0"/>
                           <Component id="CashPayment_btn" alignment="0" max="32767" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <Component id="ApplyOrder_btn" alignment="0" max="32767" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="Exit_btn" alignment="0" max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="ApplyOrder_btn" alignment="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -535,14 +528,6 @@
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ApplyOrder_btnActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JButton" name="Exit_btn">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="&#xcde8;&#xc18c;"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Exit_btnActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>

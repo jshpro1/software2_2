@@ -26,7 +26,7 @@ public class CardReceipt {
     
     public void saveCardReceipt(ArrayList<Payment> payinfo) {
         // JSON으로 변환할 때 날짜 형식 지정
-        Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd").create();
+        Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd  hh:mm:ss").create();
         
         new Save_ReceiptData(payinfo);
         

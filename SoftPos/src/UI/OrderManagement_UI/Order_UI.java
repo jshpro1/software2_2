@@ -98,7 +98,6 @@ public class Order_UI extends javax.swing.JFrame {
         CardPayment_btn = new javax.swing.JButton();
         MobilePayment_btn = new javax.swing.JButton();
         ApplyOrder_btn = new javax.swing.JButton();
-        Exit_btn = new javax.swing.JButton();
         btn_2 = new javax.swing.JButton();
         btn_3 = new javax.swing.JButton();
         btn_4 = new javax.swing.JButton();
@@ -332,13 +331,6 @@ public class Order_UI extends javax.swing.JFrame {
             }
         });
 
-        Exit_btn.setText("취소");
-        Exit_btn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Exit_btnActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -388,9 +380,7 @@ public class Order_UI extends javax.swing.JFrame {
                         .addComponent(mbtn_15, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(ApplyOrder_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Exit_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(ApplyOrder_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(CashPayment_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(12, 12, 12)
@@ -441,10 +431,7 @@ public class Order_UI extends javax.swing.JFrame {
                     .addComponent(MobilePayment_btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(CardPayment_btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(CashPayment_btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(ApplyOrder_btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Exit_btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addComponent(ApplyOrder_btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         btn_2.setText("2");
@@ -904,7 +891,8 @@ public class Order_UI extends javax.swing.JFrame {
 
     private void CashPayment_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CashPayment_btnActionPerformed
         // TODO add your handling code here:
-        new CashPayment_UI(order.getOrderList()).setVisible(true);
+        if((int)order.ob[4][1]>=0) new CashPayment_UI(order.getOrderList(),order.ob).setVisible(true);
+        else JOptionPane.showMessageDialog(null,  "받은금액을 입력해주시기 바랍니다.");
     }//GEN-LAST:event_CashPayment_btnActionPerformed
 
     private void ApplyOrder_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ApplyOrder_btnActionPerformed
@@ -918,16 +906,6 @@ public class Order_UI extends javax.swing.JFrame {
         mu.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_ApplyOrder_btnActionPerformed
-
-    private void Exit_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Exit_btnActionPerformed
-        // TODO add your handling code here
-        order.orderlist.removeAllElements();
-        otm.setRowCount(0);
-        otm.fireTableDataChanged();
-        order.setAmounts(amountsmodel, 0);
-        mu.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_Exit_btnActionPerformed
 
     private void setbtnlist() {
 
@@ -1003,7 +981,6 @@ public class Order_UI extends javax.swing.JFrame {
     private javax.swing.JButton Category5;
     private javax.swing.JButton Discount_btn;
     private javax.swing.JButton Enter_btn;
-    private javax.swing.JButton Exit_btn;
     private javax.swing.JButton MobilePayment_btn;
     private javax.swing.JTable OrderTable;
     private javax.swing.JButton allClear_btn;

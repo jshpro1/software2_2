@@ -19,6 +19,10 @@ import java.util.ArrayList;
  */
 public class VeggiesManager implements StockManager {
 
+    // Subject 하위 클래스들
+    private PaymentProcess op;
+    private StockManagement smg;
+
     private Menu menu;
     public ArrayList<Stock> slist;
 

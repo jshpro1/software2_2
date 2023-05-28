@@ -22,6 +22,11 @@ import java.util.ArrayList;
 public class MeatsManager implements StockManager {
 
     private Menu menu;
+    
+    
+    // Subject 하위 클래스들
+    private PaymentProcess op;
+    private StockManagement smg;
 
     private ArrayList<Stock> slist;
 //    public StockList slist;
