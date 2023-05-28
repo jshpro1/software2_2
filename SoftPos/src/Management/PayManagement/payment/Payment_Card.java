@@ -10,15 +10,15 @@ package Management.PayManagement.payment;
  */
 import java.util.*;
 
-public class CardPayCommand implements Command{
-    private Payment pay = new Payment();
-    ArrayList<Payment> payinfo;
-    
-    public CardPayCommand(ArrayList<Payment> payinfo) {
-        this.payinfo = payinfo;
+public class Payment_Card implements Command {
+
+    private Process_Card proc;
+
+    public Payment_Card(Process_Card proc) {
+        this.proc = proc;
     }
-    
-    public void execute(){
-        pay.CardPay(payinfo);
+
+    public void execute() {
+        proc.makeCardReceipt();
     }
 }

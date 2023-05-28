@@ -1,6 +1,7 @@
 package File;
 
 import Management.PayManagement.payment.*;
+import Management.PayManagement.receipt.*;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import java.io.File;
@@ -18,7 +19,7 @@ import java.util.ArrayList;
  */
 public class Save_ReceiptData {
 
-    public Save_ReceiptData(ArrayList<Payment> rlist) {
+    public Save_ReceiptData(ArrayList<Receipt> rlist) {
         try {
             //날짜저장형식지정
             Gson gson = new GsonBuilder()
@@ -29,10 +30,11 @@ public class Save_ReceiptData {
             FileWriter writer = new FileWriter("Receipt_Data.json");
             
             //확인용
-            String fileWriter = gson.toJson(rlist);
-            System.out.println(fileWriter);
+            String jsontext = gson.toJson(rlist);
+            System.out.println(jsontext);
             
-            gson.toJson(rlist, writer);
+            writer.write(jsontext);
+            writer.flush();
             writer.close();
         } catch (Exception e) {
             e.printStackTrace();

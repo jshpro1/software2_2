@@ -4,7 +4,7 @@
  */
 package Management.StockManagement.manager;
 
-import Management.PayManagement.payment.PaymentProcess;
+import Management.PayManagement.payment.IngredientsProcess;
 import File.*;
 import Management.MenuManagement.Menu.*;
 import Management.OrderManagement.Order.*;
@@ -19,7 +19,7 @@ import java.util.ArrayList;
 public class StaplesManager implements StockManager {
 
     // Subject 하위 클래스들
-    private PaymentProcess op;
+    private IngredientsProcess op;
     private StockManagement smg;
 
     public Menu menu;
@@ -36,7 +36,7 @@ public class StaplesManager implements StockManager {
     }
 
     @Override
-    public void subscribePaymentProcess(PaymentProcess op) {
+    public void subscribePaymentProcess(IngredientsProcess op) {
 
         op.addStockManager(this);
     }

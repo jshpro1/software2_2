@@ -5,6 +5,7 @@
 package File;
 
 import Management.PayManagement.payment.*;
+import Management.PayManagement.receipt.*;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.io.BufferedReader;
@@ -18,7 +19,7 @@ import java.util.ArrayList;
  */
 public class Bring_ReceiptData {
 
-    public ArrayList<Payment> rlist;
+    public ArrayList<Receipt> rlist;
 
     public Bring_ReceiptData() {
 
@@ -29,14 +30,14 @@ public class Bring_ReceiptData {
 
             sbuild.append(result);
             Type menuListType = null;
-            menuListType = new TypeToken<ArrayList<Payment>>() {
+            menuListType = new TypeToken<ArrayList<Receipt>>() {
             }.getType();
             rlist = new ArrayList<Payment>();
             rlist = new Gson().fromJson(result, menuListType);
 
 
         } catch (Exception e) {
-            rlist = new ArrayList<Payment>();
+            rlist = new ArrayList<Receipt>();
             e.printStackTrace();
         }
     }

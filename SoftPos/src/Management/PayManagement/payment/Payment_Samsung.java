@@ -10,15 +10,14 @@ import java.util.ArrayList;
  *
  * @author USER
  */
-public class MobilePayCommand implements Command{
-    private Payment pay = new Payment();
-    ArrayList<Payment> payinfo;
+public class Payment_Samsung implements Command{
+    private Process_Samsung proc;
 
-    public MobilePayCommand(ArrayList<Payment> payinfo) {
-        this.payinfo = payinfo;
+    public Payment_Samsung(Process_Samsung proc) {
+        this.proc = proc;
     }
-    
-    public void execute(){
-        pay.MobilePay(payinfo);
+
+    public void execute() {
+        proc.SamsungReceiptProcessing();
     }
 }

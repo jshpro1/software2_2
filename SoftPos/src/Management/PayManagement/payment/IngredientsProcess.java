@@ -18,7 +18,7 @@ import java.util.*;
  *
  * @author 남진우
  */
-public class PaymentProcess implements Subject { // 일단 재고 처리 관련 기능
+public class IngredientsProcess implements Subject { // 일단 재고 처리 관련 기능
 
     private ArrayList<StockManager> stockmanagers; //재고 관리자 명단
 //    public Menu menu; // 처리할 메뉴
@@ -26,7 +26,7 @@ public class PaymentProcess implements Subject { // 일단 재고 처리 관련 기능
     public Vector<Object[]> menu_pcs; // 메뉴랑 해당 매뉴 수량
     public Vector<String> stocknamelist; // 스톡 이름 리스트
 
-    public PaymentProcess() { // 명단 생성
+    public IngredientsProcess() { // 명단 생성
         menu_pcs = new Vector<Object[]>(); //초기화
         stockmanagers = new ArrayList<StockManager>(); //초기화
 

@@ -1,1 +1,1 @@
-[{"method":"card","installment":"일시불","cardnumber":"","date":"2023-05-28","list":[],"tax":1303,"surtax":13030,"sum":14340,"discount":0,"total":14340}]
+[{"received_amount":50005,"change":30125,"payment":"현금","date":"2023-05-28","orderlist":[[1,"돈코츠라멘",4980,2,9960],[2,"삼겹살볶음밥",4620,1,4620],[3,"채끝스테이크",7300,1,7300]],"total_amount":21880,"discount":2000,"taxation_amount":18070,"surtax_amount":1807,"pay_amoutn":19880}]

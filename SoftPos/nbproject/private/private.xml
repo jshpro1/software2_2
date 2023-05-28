@@ -10,54 +10,62 @@
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/File/Save_StockDataDefalt.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/File/Save_SalesData.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/PayManagement/payment/Payment.java</file>
+            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/SalesManagement/salse_test.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/UI/PayManagement_UI/Discount_UI.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/StockManagement/manager/MeatsManager.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/PayManagement/payment/PaymentManager.java</file>
+            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/PayManagement/payment/Process_Card.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/File/Bring_StockData.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/PayManagement/payment/Sales.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/StockManagement/manager/SauceManager.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/OrderManagement/Order/Order.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/File/Save_ReceiptData.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/UI/MenuManagement_UI/AddMenu_UI.java</file>
+            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/PayManagement/payment/Process_Samsung.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/UI/LoginManagement_UI/login_ui.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/File/Save_StockData.java</file>
+            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/PayManagement/payment/Process_Cash.java</file>
+            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/PayManagement/receipt/ReceiptMaker.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/PayManagement/discount/DiscountDecorator.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/StockManagement/manager/StaplesManager.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/File/Bring_ReceiptData.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/UI/PayManagement_UI/MobilePayment_UI.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/StockManagement/manager/StockManager.java</file>
+            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/PayManagement/receipt/Receipt_Samsung.java</file>
+            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/PayManagement/receipt/Receipt_Cash.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/UI/MenuManagement_UI/MenuManager_UI.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/MenuManagement/update/MenuManager.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/UI/PayManagement_UI/CardPayment_UI.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/StockManagement/StockIsEmpty.java</file>
+            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/PayManagement/receipt/Receipt_Card.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/StockManagement/Stock/Sauce.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/MenuManagement/update/AddMenu.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/UI/MenuManagement_UI/UpdateMenu_UI.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/MenuManagement/update/UpdateMenu.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/PayManagement/receipt/CashReceipt.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/PayManagement/payment/CardPayCommand.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/PayManagement/receipt/CardReceipt.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/StockManagement/MakeStockData.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/StockManagement/manager/VeggiesManager.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/File/Bring_MenuData.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/UI/StockManagement_UI/StockManager_UI.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/PayManagement/payment/CashPayCommand.java</file>
+            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/PayManagement/receipt/Receipt.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/OrderManagement/Order/Subject.java</file>
+            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/PayManagement/payment/Payment_Cash.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/StockManagement/Stock/Meat.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/PayManagement/payment/Command.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/PayManagement/payment/MobilePayCommand.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/MenuManagement/Menu/Menu.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/StockManagement/PlaceAnOrder.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/StockManagement/manager/StockList.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/OrderManagement/Order/OrderCarculator.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/StockManagement/Stock/Stock.java</file>
+            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/PayManagement/payment/IngredientsProcess.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/StockManagement/StockManagement.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/UI/Main_UI/Main_UI.java</file>
-            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/PayManagement/payment/PaymentProcess.java</file>
+            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/PayManagement/payment/Payment_Card.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/File/Bring_SalesData.java</file>
+            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/File/Save_MenuData.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/UI/OrderManagement_UI/Order_UI.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/StockManagement/Test_Stock.java</file>
             <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/PayManagement/receipt/SaveSales.java</file>
+            <file>file:/C:/Users/남진우/Desktop/netBeans/SoftPos/software2_2/SoftPos/src/Management/PayManagement/payment/Payment_Samsung.java</file>
         </group>
     </open-files>
 </project-private>

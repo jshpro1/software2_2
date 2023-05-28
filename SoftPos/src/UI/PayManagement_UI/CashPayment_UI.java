@@ -4,7 +4,9 @@
  */
 package UI.PayManagement_UI;
 
-import Management.PayManagement.payment.PaymentProcess;
+import Management.PayManagement.payment.IngredientsProcess;
+import Management.PayManagement.payment.*;
+import Management.PayManagement.receipt.*;
 import java.util.*;
 
 /**
@@ -14,21 +16,31 @@ import java.util.*;
 public class CashPayment_UI extends javax.swing.JFrame {
 
     private Vector<Vector> orderlist; // 주문 리스트
-    private PaymentProcess p_proc;
+    private Object[][] ob;
+    private IngredientsProcess i_proc;
+    private PaymentManager p_manager;
+    private Process_Cash c_proc;
+    private Payment_Cash c_pay;
 
     /**
      * Creates new form CashPayment_UI
      */
-    public CashPayment_UI(Vector<Vector> orderlist,Object[][] ob) {
-        p_proc = new PaymentProcess();
+    public CashPayment_UI(Vector<Vector> orderlist, Object[][] ob) {
+        // 초기화
+        i_proc = new IngredientsProcess();
         this.orderlist = orderlist;
-        p_proc.checkUsedStock(orderlist);
+        this.ob = ob;
+
+        p_manager = new PaymentManager();
+
+        i_proc.checkUsedStock(orderlist);
+
         initComponents();
-        
+
         ToBeReceive_txt.setEnabled(false);
         ReceiveAmount_btn.setEnabled(false);
         Change_btn.setEnabled(false);
-        
+
         ToBeReceive_txt.setText(ob[2][1].toString());
         ReceiveAmount_btn.setText(ob[3][1].toString());
         Change_btn.setText(ob[4][1].toString());
@@ -138,8 +150,21 @@ public class CashPayment_UI extends javax.swing.JFrame {
     private void Apply_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Apply_btnActionPerformed
 
         // TODO add your handling code here:
-        p_proc.applyUsedStock();
-        p_proc.notifyStockManager();
+        /*
+        재고처리하는 부분
+         */
+//        i_proc.applyUsedStock();
+//        i_proc.notifyStockManager();
+
+        /*
+        영수증 저장하는 부분
+         */
+        c_proc = new Process_Cash((Receipt_Cash) new ReceiptMaker(orderlist, ob, null, null).MakeCashReceipt());
+        c_pay = new Payment_Cash(c_proc);
+
+        p_manager.setCommend(c_pay);
+        p_manager.takePayment();
+
         this.dispose();
     }//GEN-LAST:event_Apply_btnActionPerformed
 

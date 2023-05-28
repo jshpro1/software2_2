@@ -25,10 +25,10 @@ public class Save_MenuData {
             file = new File("Menu_Data.json");
 
             FileWriter writer = new FileWriter(file);
-            String fileWriter = gs.toJson(mlist);
-            System.out.println(fileWriter);
+            String jsontext = gs.toJson(mlist);
+            System.out.println(jsontext);
 
-            writer.write(fileWriter);
+            writer.write(jsontext);
             writer.flush();
             writer.close();
         } catch (Exception e) {

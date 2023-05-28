@@ -5,7 +5,7 @@
 package Management.StockManagement;
 
 import File.*;
-import Management.PayManagement.payment.PaymentProcess;
+import Management.PayManagement.payment.IngredientsProcess;
 import Management.StockManagement.Stock.*;
 import Management.StockManagement.manager.*;
 import java.util.ArrayList;

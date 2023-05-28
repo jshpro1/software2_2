@@ -10,15 +10,14 @@ import java.util.ArrayList;
  *
  * @author USER
  */
-public class CashPayCommand implements Command{
-    private Payment pay = new Payment();
-    ArrayList<Payment> payinfo;
-    
-    public CashPayCommand(ArrayList<Payment> payinfo) {
-        this.payinfo = payinfo;
+public class Payment_Cash implements Command{
+    private Process_Cash proc;
+
+    public Payment_Cash(Process_Cash proc) {
+        this.proc = proc;
     }
-    
-    public void execute(){
-        pay.CashPay(payinfo);
+
+    public void execute() {
+        proc.CashReceiptProcessing();
     }
 }
