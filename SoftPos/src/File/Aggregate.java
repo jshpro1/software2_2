@@ -11,5 +11,5 @@ import java.util.Iterator;
  * @author ³²Áø¿ì
  */
 public interface Aggregate {
-    public abstract Iterator cerateIterator();
+    public abstract Iterator createIterator();
 }

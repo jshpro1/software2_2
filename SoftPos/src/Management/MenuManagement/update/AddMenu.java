@@ -52,7 +52,7 @@ public class AddMenu {
         /*
         0528 이터레이터 삽입
          */
-        Iterator slist_it = new Bring_StockData(type).cerateIterator();
+        Iterator slist_it = new Bring_StockData(type).createIterator();
         while (slist_it.hasNext()) {
             Stock stk = (Stock) slist_it.next();
             vlist = new Vector();

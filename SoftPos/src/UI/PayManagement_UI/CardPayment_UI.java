@@ -9,6 +9,10 @@ import Management.PayManagement.payment.PaymentManager;
 import Management.PayManagement.payment.*;
 import Management.PayManagement.receipt.Receipt;
 import Management.PayManagement.receipt.ReceiptMaker;
+import Management.StockManagement.manager.MeatsManager;
+import Management.StockManagement.manager.SauceManager;
+import Management.StockManagement.manager.StaplesManager;
+import Management.StockManagement.manager.VeggiesManager;
 import java.util.Vector;
 
 /**
@@ -30,6 +34,13 @@ public class CardPayment_UI extends javax.swing.JFrame {
     public CardPayment_UI(Vector<Vector> orderlist, Object[][] ob) {
         // √ ±‚»≠
         i_proc = new IngredientsProcess();
+        new StaplesManager().subscribePaymentProcess(i_proc);
+        new MeatsManager().subscribePaymentProcess(i_proc);
+        new SauceManager().subscribePaymentProcess(i_proc);
+        new VeggiesManager().subscribePaymentProcess(i_proc);
+        
+        
+        
         this.orderlist = orderlist;
         this.ob = ob;
 

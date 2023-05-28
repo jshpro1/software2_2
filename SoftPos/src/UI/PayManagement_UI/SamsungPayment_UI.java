@@ -9,6 +9,10 @@ import Management.PayManagement.payment.PaymentManager;
 import Management.PayManagement.payment.*;
 import Management.PayManagement.receipt.Receipt;
 import Management.PayManagement.receipt.ReceiptMaker;
+import Management.StockManagement.manager.MeatsManager;
+import Management.StockManagement.manager.SauceManager;
+import Management.StockManagement.manager.StaplesManager;
+import Management.StockManagement.manager.VeggiesManager;
 import java.util.Vector;
 
 /**
@@ -30,6 +34,11 @@ public class SamsungPayment_UI extends javax.swing.JFrame {
     public SamsungPayment_UI(Vector<Vector> orderlist, Object[][] ob) {
         // 초기화
         i_proc = new IngredientsProcess();
+        new StaplesManager().subscribePaymentProcess(i_proc);
+        new MeatsManager().subscribePaymentProcess(i_proc);
+        new SauceManager().subscribePaymentProcess(i_proc);
+        new VeggiesManager().subscribePaymentProcess(i_proc);
+        
         this.orderlist = orderlist;
         this.ob = ob;
 
@@ -189,7 +198,7 @@ public class SamsungPayment_UI extends javax.swing.JFrame {
         /*
         영수증 저장하는 부분
          */
-        Receipt receipt = new ReceiptMaker("삼성페이", orderlist, ob, jTextField2.getText(), (String)jComboBox1.getSelectedItem()).MakeReceipt();
+        Receipt receipt = new ReceiptMaker("삼성페이", orderlist, ob, jTextField2.getText(), (String) jComboBox1.getSelectedItem()).MakeReceipt();
         c_proc = new Process_Samsung(receipt);
         c_pay = new Payment_Samsung(c_proc);
 

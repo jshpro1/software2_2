@@ -4,10 +4,14 @@
  */
 package Management.SalesManagement;
 
+import Management.PayManagement.receipt.Receipt;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
- * @author ³²Áø¿ì
+ * @author jsh
  */
-public class salse_test {
-    
+interface SalesCalculation {
+    int calculate(ArrayList<Receipt> sales);
 }

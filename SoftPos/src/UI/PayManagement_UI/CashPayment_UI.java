@@ -7,6 +7,10 @@ package UI.PayManagement_UI;
 import Management.PayManagement.payment.IngredientsProcess;
 import Management.PayManagement.payment.*;
 import Management.PayManagement.receipt.*;
+import Management.StockManagement.manager.MeatsManager;
+import Management.StockManagement.manager.SauceManager;
+import Management.StockManagement.manager.StaplesManager;
+import Management.StockManagement.manager.VeggiesManager;
 import java.util.*;
 
 /**
@@ -28,6 +32,12 @@ public class CashPayment_UI extends javax.swing.JFrame {
     public CashPayment_UI(Vector<Vector> orderlist, Object[][] ob) {
         // √ ±‚»≠
         i_proc = new IngredientsProcess();
+        new StaplesManager().subscribePaymentProcess(i_proc);
+        new MeatsManager().subscribePaymentProcess(i_proc);
+        new SauceManager().subscribePaymentProcess(i_proc);
+        new VeggiesManager().subscribePaymentProcess(i_proc);
+        
+        
         this.orderlist = orderlist;
         this.ob = ob;
 

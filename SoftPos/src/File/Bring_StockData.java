@@ -102,7 +102,7 @@ public class Bring_StockData implements Aggregate{
     }
 
     @Override
-    public Iterator cerateIterator() {
+    public Iterator createIterator() {
         return new StockListIterator(this);
     }
 

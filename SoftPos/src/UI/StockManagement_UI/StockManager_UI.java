@@ -5,6 +5,10 @@
 package UI.StockManagement_UI;
 
 import Management.StockManagement.*;
+import Management.StockManagement.manager.MeatsManager;
+import Management.StockManagement.manager.SauceManager;
+import Management.StockManagement.manager.StaplesManager;
+import Management.StockManagement.manager.VeggiesManager;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -22,6 +26,10 @@ public class StockManager_UI extends javax.swing.JFrame {
      */
     public StockManager_UI() {
         s_manage = new StockManagement();
+        new MeatsManager().subscribeStockMangement(s_manage);
+        new SauceManager().subscribeStockMangement(s_manage);
+        new StaplesManager().subscribeStockMangement(s_manage);
+        new VeggiesManager().subscribeStockMangement(s_manage);
         initComponents();
     }
 

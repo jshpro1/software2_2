@@ -26,10 +26,6 @@ public class StockManagement implements Subject {
         stockmanagers = new ArrayList<StockManager>();
 
         //임시 선언
-        new MeatsManager().subscribeStockMangement(this);
-        new SauceManager().subscribeStockMangement(this);
-        new StaplesManager().subscribeStockMangement(this);
-        new VeggiesManager().subscribeStockMangement(this);
         
         bringStockData();
 
