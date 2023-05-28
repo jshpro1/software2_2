@@ -14,9 +14,9 @@ import java.util.Vector;
  */
 public class Process_Samsung { //¸®½Ã¹ö
 
-    private Receipt_Samsung receipt;
+    private Receipt receipt;
 
-    public Process_Samsung(Receipt_Samsung receipt) {
+    public Process_Samsung(Receipt receipt) {
         this.receipt = receipt;
     }
     

@@ -32,7 +32,7 @@ public class Bring_ReceiptData {
             Type menuListType = null;
             menuListType = new TypeToken<ArrayList<Receipt>>() {
             }.getType();
-            rlist = new ArrayList<Payment>();
+            rlist = new ArrayList<Receipt>();
             rlist = new Gson().fromJson(result, menuListType);
 
 

@@ -159,7 +159,8 @@ public class CashPayment_UI extends javax.swing.JFrame {
         /*
         영수증 저장하는 부분
          */
-        c_proc = new Process_Cash((Receipt_Cash) new ReceiptMaker(orderlist, ob, null, null).MakeCashReceipt());
+        Receipt receipt = new ReceiptMaker("현금", orderlist, ob, null, null).MakeReceipt();
+        c_proc = new Process_Cash(receipt);
         c_pay = new Payment_Cash(c_proc);
 
         p_manager.setCommend(c_pay);

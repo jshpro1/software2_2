@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package main;
-
+import File.Bring_ReceiptData;
 import Management.OrderManagement.Order.*;
 import Management.StockManagement.manager.*;
 
@@ -26,6 +26,8 @@ public class SoftPos {
 //        op.notifyStockManager();
 //        cm.count();
 //        
+
+        new Bring_ReceiptData();
     }
-    
+
 }

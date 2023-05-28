@@ -15,15 +15,15 @@ import java.util.Vector;
  */
 public class Process_Cash { //¸®½Ã¹ö
 
-    private Receipt_Cash receipt;
+    private Receipt receipt;
 
-    public Process_Cash(Receipt_Cash receipt) {
+    public Process_Cash(Receipt receipt) {
         this.receipt = receipt;
     }
     
     public void CashReceiptProcessing(){
-        ArrayList<Receipt> rlist = new ArrayList<Receipt>();
-//        rlist = new Bring_ReceiptData().rlist;
+        ArrayList<Receipt> rlist;
+        rlist = new Bring_ReceiptData().rlist;
         rlist.add(receipt);
         new Save_ReceiptData(rlist);
         System.out.println(receipt);

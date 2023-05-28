@@ -12,9 +12,9 @@ import java.util.*;
  */
 public class Process_Card { //¸®½Ã¹ö
     
-    private Receipt_Card receipt;
+    private Receipt receipt;
 
-    public Process_Card(Receipt_Card receipt) {
+    public Process_Card(Receipt receipt) {
         this.receipt = receipt;
     }
     

@@ -12,7 +12,7 @@ import java.util.Vector;
  *
  * @author 남진우
  */
-public abstract class Receipt {
+public class Receipt {
 
     //공통
     public String payment;
@@ -26,7 +26,16 @@ public abstract class Receipt {
     public int pay_amoutn; //결제금액
 
     //현금 전용
+    public int received_amount; // 현금
+    public int change; // 거스름돈
 
     //카드, 모바일 전용
+    public String cardnumber;
+    public String installment; //할부
+
+    public Receipt() {
+
+        
+    }
 
 }

@@ -20,9 +20,12 @@ public class ReceiptMaker {
     public String cardnum;
     public Object[][] ob;
     public String installment;
+    public Receipt receipt;
+    public String type;
 
-    public ReceiptMaker(Vector<Vector> orderlist, Object[][] ob, String cardnum, String installment) {
-
+    public ReceiptMaker(String type, Vector<Vector> orderlist, Object[][] ob, String cardnum, String installment) {
+        receipt = new Receipt();
+        this.type = type;
         this.total = (int) ob[0][1];
         this.discount = (int) ob[1][1];
         this.receive = (int) ob[3][1];
@@ -33,55 +36,23 @@ public class ReceiptMaker {
 
     }
 
-    public Receipt MakeCashReceipt() {
-        
-        Receipt_Cash r = new Receipt_Cash();
-        r.payment = "현금";
-        r.date = new Date();
-        r.orderlist = orderlist;
-        r.total_amount = total;
-        r.discount = discount;
-        r.taxation_amount = (total - discount) / 11 * 10;
-        r.surtax_amount = (total - discount) / 11;
-        r.pay_amoutn = total - discount;
+    public Receipt MakeReceipt() {
 
-        r.change = change;
-        r.received_amount = receive;
+        receipt.payment = "현금";
+        receipt.date = new Date();
+        receipt.orderlist = orderlist;
+        receipt.total_amount = total;
+        receipt.discount = discount;
+        receipt.taxation_amount = (total - discount) / 11 * 10;
+        receipt.surtax_amount = (total - discount) / 11;
+        receipt.pay_amoutn = total - discount;
 
-        return r;
-    }
+        receipt.change = change;
+        receipt.received_amount = receive;
 
-    public Receipt MakeCashReciet() {
-        Receipt_Card r = new Receipt_Card();
-        r.payment = "카드";
-        r.date = new Date();
-        r.orderlist = orderlist;
-        r.total_amount = total;
-        r.discount = discount;
-        r.taxation_amount = (total - discount) / 11 * 10;
-        r.surtax_amount = (total - discount) / 11;
-        r.pay_amoutn = total - discount;
-
-        r.cardnumber = cardnum;
-        r.installment = installment;
-        return r;
-    }
-
-    public Receipt MakeSamsungReciet() {
-        Receipt_Samsung r = new Receipt_Samsung();
-        r.payment = "삼성";
-        r.date = new Date();
-        r.orderlist = orderlist;
-        r.total_amount = total;
-        r.discount = discount;
-        r.taxation_amount = (total - discount) / 11 * 10;
-        r.surtax_amount = (total - discount) / 11;
-        r.pay_amoutn = total - discount;
-
-        r.cardnumber = cardnum;
-        r.installment = installment;
-        return r;
-
+        receipt.cardnumber = cardnum;
+        receipt.installment = installment;
+        return receipt;
     }
 
 }
