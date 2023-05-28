@@ -4,7 +4,7 @@
  */
 package Management.Test.Json;
 
-import Management.StockMagagement.Stock.Basic.*;
+import Management.StockManagement.Stock.Stock;
 import com.google.gson.Gson;
 import java.io.File;
 import java.io.FileWriter;
@@ -13,9 +13,9 @@ import java.io.FileWriter;
  *
  * @author 남진우
  */
-public class StockToJson {
+public class StockToJson { // 임마도 임시 방편
 
-    public StockToJson(BasicStock stock) {
+    public StockToJson(Stock stock) {
         try{
             Gson gs = new Gson();
             File file = new File("Stocks.json");
