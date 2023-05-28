@@ -59,6 +59,7 @@ public class AddMenu {
             vlist.add(stk.getName());
             vlist.add((int) stk.getKcal());
             vlist.add(stk.getPrice());
+            tm.addRow(vlist);
         }
         tm.fireTableDataChanged();
     }

@@ -35,7 +35,7 @@ public class MeatsManager implements StockManager {
 
 //        slist = new StockList();
         slist = new ArrayList<>();
-//        bringData();
+        bringData();
     }
 
     @Override

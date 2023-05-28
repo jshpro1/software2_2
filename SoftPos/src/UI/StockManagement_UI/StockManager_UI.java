@@ -26,6 +26,7 @@ public class StockManager_UI extends javax.swing.JFrame {
      */
     public StockManager_UI() {
         s_manage = new StockManagement();
+        
         new MeatsManager().subscribeStockMangement(s_manage);
         new SauceManager().subscribeStockMangement(s_manage);
         new StaplesManager().subscribeStockMangement(s_manage);

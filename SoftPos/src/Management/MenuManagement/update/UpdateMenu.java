@@ -47,10 +47,9 @@ public class UpdateMenu { // 수정
 //            tm.addRow(vlist);
 //        }
 
-/*
+        /*
 이터레이터 삽입
-*/
-
+         */
         Iterator slist_it = new Bring_StockData(type).createIterator();
         while (slist_it.hasNext()) {
             Stock stk = (Stock) slist_it.next();
@@ -58,6 +57,7 @@ public class UpdateMenu { // 수정
             vlist.add(stk.getName());
             vlist.add((int) stk.getKcal());
             vlist.add(stk.getPrice());
+            tm.addRow(vlist);
         }
         tm.fireTableDataChanged();
     }
